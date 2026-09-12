@@ -1,0 +1,3217 @@
+{
+  "meta": {
+    "title": "Muscles of the human body",
+    "generated": "2026-09-12",
+    "nomenclature": "English forms of Terminologia Anatomica (TA98/TA2) names; common alternatives in 'aka'.",
+    "conventions": [
+      "One entry per named muscle; heads, bellies and parts are listed in 'parts', not as separate entries.",
+      "'paired' is true for muscles present on both the left and right sides (skeletal muscles only).",
+      "'variable' is true for muscles not present in everyone.",
+      "'count' is the number of serial muscles per side (e.g. 11 external intercostals); omitted when 1.",
+      "Individual-muscle totals double paired entries and multiply by 'count'; serial groups without a fixed count are counted once per side, so totals are approximate."
+    ],
+    "counts": {
+      "skeletal_entries": 270,
+      "skeletal_constant": 242,
+      "skeletal_variable": 28,
+      "skeletal_individual_approx": 702,
+      "skeletal_individual_constant_approx": 646,
+      "smooth_entries": 25,
+      "cardiac_entries": 5,
+      "by_region": {
+        "Head": 59,
+        "Neck": 36,
+        "Back": 35,
+        "Thorax": 12,
+        "Abdomen": 7,
+        "Pelvis & perineum": 15,
+        "Upper limb": 43,
+        "Lower limb": 55,
+        "Anatomical variants": 8,
+        "Smooth & cardiac": 30
+      }
+    },
+    "sources": [
+      "Terminologia Anatomica (FIPAT, TA98 and TA2)",
+      "Cross-checked against Wikidata TA98/TA2-coded terms and Wikipedia's List of skeletal muscles of the human body"
+    ]
+  },
+  "muscles": [
+    {
+      "id": "levator-palpebrae-superioris",
+      "name": "Levator palpebrae superioris",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Raises the upper eyelid; its smooth-muscle slip is the superior tarsal muscle."
+    },
+    {
+      "id": "superior-rectus",
+      "name": "Superior rectus",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "inferior-rectus",
+      "name": "Inferior rectus",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "medial-rectus",
+      "name": "Medial rectus",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "lateral-rectus",
+      "name": "Lateral rectus",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "superior-oblique",
+      "name": "Superior oblique",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "inferior-oblique",
+      "name": "Inferior oblique",
+      "region": "Head",
+      "group": "Eye: extraocular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tensor-tympani",
+      "name": "Tensor tympani",
+      "region": "Head",
+      "group": "Ear: middle ear",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "stapedius",
+      "name": "Stapedius",
+      "region": "Head",
+      "group": "Ear: middle ear",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "The smallest skeletal muscle in the body."
+    },
+    {
+      "id": "occipitofrontalis",
+      "name": "Occipitofrontalis",
+      "region": "Head",
+      "group": "Facial expression: scalp (epicranius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Frontal belly (frontalis)",
+        "Occipital belly (occipitalis)"
+      ],
+      "aka": [
+        "Frontalis",
+        "Occipitalis"
+      ]
+    },
+    {
+      "id": "temporoparietalis",
+      "name": "Temporoparietalis",
+      "region": "Head",
+      "group": "Facial expression: scalp (epicranius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "orbicularis-oculi",
+      "name": "Orbicularis oculi",
+      "region": "Head",
+      "group": "Facial expression: eyelids & eyebrows",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Orbital part",
+        "Palpebral part",
+        "Deep palpebral (lacrimal) part, or Horner's muscle",
+        "Ciliary bundle, or Riolan's muscle"
+      ]
+    },
+    {
+      "id": "corrugator-supercilii",
+      "name": "Corrugator supercilii",
+      "region": "Head",
+      "group": "Facial expression: eyelids & eyebrows",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "depressor-supercilii",
+      "name": "Depressor supercilii",
+      "region": "Head",
+      "group": "Facial expression: eyelids & eyebrows",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Often described as part of orbicularis oculi."
+    },
+    {
+      "id": "procerus",
+      "name": "Procerus",
+      "region": "Head",
+      "group": "Facial expression: nose",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "nasalis",
+      "name": "Nasalis",
+      "region": "Head",
+      "group": "Facial expression: nose",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Transverse part (compressor naris)",
+        "Alar part (dilator naris)"
+      ]
+    },
+    {
+      "id": "depressor-septi-nasi",
+      "name": "Depressor septi nasi",
+      "region": "Head",
+      "group": "Facial expression: nose",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "orbicularis-oris",
+      "name": "Orbicularis oris",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Marginal part",
+        "Labial part"
+      ]
+    },
+    {
+      "id": "buccinator",
+      "name": "Buccinator",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "levator-labii-superioris",
+      "name": "Levator labii superioris",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "levator-labii-superioris-alaeque-nasi",
+      "name": "Levator labii superioris alaeque nasi",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "The longest muscle name in the body."
+    },
+    {
+      "id": "levator-anguli-oris",
+      "name": "Levator anguli oris",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Caninus"
+      ]
+    },
+    {
+      "id": "zygomaticus-major",
+      "name": "Zygomaticus major",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "zygomaticus-minor",
+      "name": "Zygomaticus minor",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "risorius",
+      "name": "Risorius",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Absent in some people."
+    },
+    {
+      "id": "depressor-anguli-oris",
+      "name": "Depressor anguli oris",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Triangularis"
+      ]
+    },
+    {
+      "id": "transversus-menti",
+      "name": "Transversus menti",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Transverse muscle of chin"
+      ],
+      "note": "Inconstant slip crossing the midline under the chin."
+    },
+    {
+      "id": "depressor-labii-inferioris",
+      "name": "Depressor labii inferioris",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Quadratus labii inferioris"
+      ]
+    },
+    {
+      "id": "mentalis",
+      "name": "Mentalis",
+      "region": "Head",
+      "group": "Facial expression: mouth & cheeks",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "anterior-auricular",
+      "name": "Anterior auricular",
+      "region": "Head",
+      "group": "Facial expression: ear (extrinsic auricular)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Auricularis anterior"
+      ]
+    },
+    {
+      "id": "superior-auricular",
+      "name": "Superior auricular",
+      "region": "Head",
+      "group": "Facial expression: ear (extrinsic auricular)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Auricularis superior"
+      ]
+    },
+    {
+      "id": "posterior-auricular",
+      "name": "Posterior auricular",
+      "region": "Head",
+      "group": "Facial expression: ear (extrinsic auricular)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Auricularis posterior"
+      ]
+    },
+    {
+      "id": "helicis-major",
+      "name": "Helicis major",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "helicis-minor",
+      "name": "Helicis minor",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tragicus",
+      "name": "Tragicus",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "pyramidal-muscle-of-auricle",
+      "name": "Pyramidal muscle of auricle",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Inconstant slip of tragicus."
+    },
+    {
+      "id": "antitragicus",
+      "name": "Antitragicus",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "transverse-muscle-of-auricle",
+      "name": "Transverse muscle of auricle",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Transversus auriculae"
+      ]
+    },
+    {
+      "id": "oblique-muscle-of-auricle",
+      "name": "Oblique muscle of auricle",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Obliquus auriculae"
+      ]
+    },
+    {
+      "id": "muscle-of-terminal-notch",
+      "name": "Muscle of terminal notch",
+      "region": "Head",
+      "group": "Ear: intrinsic auricular",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Musculus incisurae terminalis auriculae"
+      ]
+    },
+    {
+      "id": "masseter",
+      "name": "Masseter",
+      "region": "Head",
+      "group": "Mastication",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superficial part",
+        "Deep part"
+      ]
+    },
+    {
+      "id": "temporalis",
+      "name": "Temporalis",
+      "region": "Head",
+      "group": "Mastication",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Temporal muscle"
+      ]
+    },
+    {
+      "id": "lateral-pterygoid",
+      "name": "Lateral pterygoid",
+      "region": "Head",
+      "group": "Mastication",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superior head",
+        "Inferior head"
+      ]
+    },
+    {
+      "id": "medial-pterygoid",
+      "name": "Medial pterygoid",
+      "region": "Head",
+      "group": "Mastication",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superficial head",
+        "Deep head"
+      ]
+    },
+    {
+      "id": "pterygoideus-proprius",
+      "name": "Pterygoideus proprius",
+      "region": "Head",
+      "group": "Mastication",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Inconstant slip between the infratemporal crest and lateral pterygoid plate."
+    },
+    {
+      "id": "genioglossus",
+      "name": "Genioglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "hyoglossus",
+      "name": "Hyoglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "chondroglossus",
+      "name": "Chondroglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Often counted as part of hyoglossus."
+    },
+    {
+      "id": "triticeoglossus",
+      "name": "Triticeoglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Inconstant slip from the triticeal cartilage to the tongue."
+    },
+    {
+      "id": "styloglossus",
+      "name": "Styloglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "palatoglossus",
+      "name": "Palatoglossus",
+      "region": "Head",
+      "group": "Tongue: extrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Also a soft-palate muscle; the only tongue muscle not supplied by the hypoglossal nerve."
+    },
+    {
+      "id": "superior-longitudinal-muscle-of-tongue",
+      "name": "Superior longitudinal muscle of tongue",
+      "region": "Head",
+      "group": "Tongue: intrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "inferior-longitudinal-muscle-of-tongue",
+      "name": "Inferior longitudinal muscle of tongue",
+      "region": "Head",
+      "group": "Tongue: intrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "transverse-muscle-of-tongue",
+      "name": "Transverse muscle of tongue",
+      "region": "Head",
+      "group": "Tongue: intrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "vertical-muscle-of-tongue",
+      "name": "Vertical muscle of tongue",
+      "region": "Head",
+      "group": "Tongue: intrinsic",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "levator-veli-palatini",
+      "name": "Levator veli palatini",
+      "region": "Head",
+      "group": "Soft palate",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tensor-veli-palatini",
+      "name": "Tensor veli palatini",
+      "region": "Head",
+      "group": "Soft palate",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "musculus-uvulae",
+      "name": "Musculus uvulae",
+      "region": "Head",
+      "group": "Soft palate",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Uvular muscle"
+      ]
+    },
+    {
+      "id": "palatopharyngeus",
+      "name": "Palatopharyngeus",
+      "region": "Head",
+      "group": "Soft palate",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Anterior fascicle",
+        "Posterior fascicle"
+      ],
+      "note": "Also acts as a longitudinal muscle of the pharynx."
+    },
+    {
+      "id": "platysma",
+      "name": "Platysma",
+      "region": "Neck",
+      "group": "Superficial & lateral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "A facial-expression muscle (facial nerve) spread over the front of the neck."
+    },
+    {
+      "id": "sternocleidomastoid",
+      "name": "Sternocleidomastoid",
+      "region": "Neck",
+      "group": "Superficial & lateral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Sternal head",
+        "Clavicular head"
+      ],
+      "aka": [
+        "SCM"
+      ]
+    },
+    {
+      "id": "digastric",
+      "name": "Digastric",
+      "region": "Neck",
+      "group": "Suprahyoid",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Anterior belly",
+        "Posterior belly"
+      ]
+    },
+    {
+      "id": "stylohyoid",
+      "name": "Stylohyoid",
+      "region": "Neck",
+      "group": "Suprahyoid",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "mylohyoid",
+      "name": "Mylohyoid",
+      "region": "Neck",
+      "group": "Suprahyoid",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "geniohyoid",
+      "name": "Geniohyoid",
+      "region": "Neck",
+      "group": "Suprahyoid",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "sternohyoid",
+      "name": "Sternohyoid",
+      "region": "Neck",
+      "group": "Infrahyoid (strap muscles)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "omohyoid",
+      "name": "Omohyoid",
+      "region": "Neck",
+      "group": "Infrahyoid (strap muscles)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superior belly",
+        "Inferior belly"
+      ]
+    },
+    {
+      "id": "sternothyroid",
+      "name": "Sternothyroid",
+      "region": "Neck",
+      "group": "Infrahyoid (strap muscles)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "thyrohyoid",
+      "name": "Thyrohyoid",
+      "region": "Neck",
+      "group": "Infrahyoid (strap muscles)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "levator-glandulae-thyroideae",
+      "name": "Levator glandulae thyroideae",
+      "region": "Neck",
+      "group": "Infrahyoid (strap muscles)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Levator of thyroid gland"
+      ]
+    },
+    {
+      "id": "longus-colli",
+      "name": "Longus colli",
+      "region": "Neck",
+      "group": "Prevertebral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superior oblique part",
+        "Vertical part",
+        "Inferior oblique part"
+      ],
+      "aka": [
+        "Longus cervicis"
+      ]
+    },
+    {
+      "id": "longus-capitis",
+      "name": "Longus capitis",
+      "region": "Neck",
+      "group": "Prevertebral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "rectus-capitis-anterior",
+      "name": "Rectus capitis anterior",
+      "region": "Neck",
+      "group": "Prevertebral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "rectus-capitis-lateralis",
+      "name": "Rectus capitis lateralis",
+      "region": "Neck",
+      "group": "Prevertebral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "anterior-scalene",
+      "name": "Anterior scalene",
+      "region": "Neck",
+      "group": "Scalenes",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Scalenus anterior"
+      ]
+    },
+    {
+      "id": "middle-scalene",
+      "name": "Middle scalene",
+      "region": "Neck",
+      "group": "Scalenes",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Scalenus medius"
+      ]
+    },
+    {
+      "id": "posterior-scalene",
+      "name": "Posterior scalene",
+      "region": "Neck",
+      "group": "Scalenes",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Scalenus posterior"
+      ]
+    },
+    {
+      "id": "scalenus-minimus",
+      "name": "Scalenus minimus",
+      "region": "Neck",
+      "group": "Scalenes",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Pleural scalene",
+        "Sibson's muscle"
+      ]
+    },
+    {
+      "id": "rectus-capitis-posterior-major",
+      "name": "Rectus capitis posterior major",
+      "region": "Neck",
+      "group": "Suboccipital",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "rectus-capitis-posterior-minor",
+      "name": "Rectus capitis posterior minor",
+      "region": "Neck",
+      "group": "Suboccipital",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "obliquus-capitis-superior",
+      "name": "Obliquus capitis superior",
+      "region": "Neck",
+      "group": "Suboccipital",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Superior oblique of head"
+      ]
+    },
+    {
+      "id": "obliquus-capitis-inferior",
+      "name": "Obliquus capitis inferior",
+      "region": "Neck",
+      "group": "Suboccipital",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Inferior oblique of head"
+      ]
+    },
+    {
+      "id": "superior-pharyngeal-constrictor",
+      "name": "Superior pharyngeal constrictor",
+      "region": "Neck",
+      "group": "Pharynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Pterygopharyngeal part",
+        "Buccopharyngeal part",
+        "Mylopharyngeal part",
+        "Glossopharyngeal part"
+      ]
+    },
+    {
+      "id": "middle-pharyngeal-constrictor",
+      "name": "Middle pharyngeal constrictor",
+      "region": "Neck",
+      "group": "Pharynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Chondropharyngeal part",
+        "Ceratopharyngeal part"
+      ]
+    },
+    {
+      "id": "inferior-pharyngeal-constrictor",
+      "name": "Inferior pharyngeal constrictor",
+      "region": "Neck",
+      "group": "Pharynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Thyropharyngeal part",
+        "Cricopharyngeal part (cricopharyngeus)"
+      ],
+      "aka": [
+        "Cricopharyngeus",
+        "Upper esophageal sphincter"
+      ]
+    },
+    {
+      "id": "stylopharyngeus",
+      "name": "Stylopharyngeus",
+      "region": "Neck",
+      "group": "Pharynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "salpingopharyngeus",
+      "name": "Salpingopharyngeus",
+      "region": "Neck",
+      "group": "Pharynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "cricothyroid",
+      "name": "Cricothyroid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Straight part",
+        "Oblique part"
+      ],
+      "note": "The only intrinsic laryngeal muscle supplied by the superior (external) laryngeal nerve."
+    },
+    {
+      "id": "posterior-cricoarytenoid",
+      "name": "Posterior cricoarytenoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "The only muscle that opens (abducts) the vocal folds."
+    },
+    {
+      "id": "ceratocricoid",
+      "name": "Ceratocricoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true
+    },
+    {
+      "id": "lateral-cricoarytenoid",
+      "name": "Lateral cricoarytenoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "thyroarytenoid",
+      "name": "Thyroarytenoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Thyroepiglottic part"
+      ]
+    },
+    {
+      "id": "vocalis",
+      "name": "Vocalis",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Vocal muscle"
+      ]
+    },
+    {
+      "id": "oblique-arytenoid",
+      "name": "Oblique arytenoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Aryepiglottic part (aryepiglotticus)"
+      ]
+    },
+    {
+      "id": "transverse-arytenoid",
+      "name": "Transverse arytenoid",
+      "region": "Neck",
+      "group": "Larynx",
+      "type": "skeletal",
+      "paired": false,
+      "variable": false
+    },
+    {
+      "id": "trapezius",
+      "name": "Trapezius",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Descending part (upper)",
+        "Transverse part (middle)",
+        "Ascending part (lower)"
+      ],
+      "aka": [
+        "Traps"
+      ]
+    },
+    {
+      "id": "latissimus-dorsi",
+      "name": "Latissimus dorsi",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Lats"
+      ]
+    },
+    {
+      "id": "rhomboid-major",
+      "name": "Rhomboid major",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "rhomboid-minor",
+      "name": "Rhomboid minor",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "levator-scapulae",
+      "name": "Levator scapulae",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "transversus-nuchae",
+      "name": "Transversus nuchae",
+      "region": "Back",
+      "group": "Superficial (move the shoulder girdle)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Inconstant thin band over the upper trapezius, supplied by the facial nerve."
+    },
+    {
+      "id": "serratus-posterior-superior",
+      "name": "Serratus posterior superior",
+      "region": "Back",
+      "group": "Intermediate (respiratory)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "serratus-posterior-inferior",
+      "name": "Serratus posterior inferior",
+      "region": "Back",
+      "group": "Intermediate (respiratory)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "splenius-capitis",
+      "name": "Splenius capitis",
+      "region": "Back",
+      "group": "Deep: splenius",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "splenius-cervicis",
+      "name": "Splenius cervicis",
+      "region": "Back",
+      "group": "Deep: splenius",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Splenius colli"
+      ]
+    },
+    {
+      "id": "iliocostalis-lumborum",
+      "name": "Iliocostalis lumborum",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "iliocostalis-thoracis",
+      "name": "Iliocostalis thoracis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "iliocostalis-cervicis",
+      "name": "Iliocostalis cervicis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Iliocostalis colli"
+      ]
+    },
+    {
+      "id": "longissimus-thoracis",
+      "name": "Longissimus thoracis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Thoracic part",
+        "Lumbar part"
+      ]
+    },
+    {
+      "id": "longissimus-cervicis",
+      "name": "Longissimus cervicis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Longissimus colli"
+      ]
+    },
+    {
+      "id": "longissimus-capitis",
+      "name": "Longissimus capitis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "spinalis-thoracis",
+      "name": "Spinalis thoracis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "spinalis-cervicis",
+      "name": "Spinalis cervicis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Spinalis colli"
+      ],
+      "note": "Often poorly developed or absent."
+    },
+    {
+      "id": "spinalis-capitis",
+      "name": "Spinalis capitis",
+      "region": "Back",
+      "group": "Deep: erector spinae",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Usually blended with semispinalis capitis."
+    },
+    {
+      "id": "semispinalis-thoracis",
+      "name": "Semispinalis thoracis",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "semispinalis-cervicis",
+      "name": "Semispinalis cervicis",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Semispinalis colli"
+      ]
+    },
+    {
+      "id": "semispinalis-capitis",
+      "name": "Semispinalis capitis",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Medial part (biventer cervicis)",
+        "Lateral part"
+      ]
+    },
+    {
+      "id": "multifidus",
+      "name": "Multifidus",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Multifidus lumborum",
+        "Multifidus thoracis",
+        "Multifidus cervicis"
+      ]
+    },
+    {
+      "id": "rotatores-lumborum",
+      "name": "Rotatores lumborum",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "rotatores-thoracis",
+      "name": "Rotatores thoracis",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Long rotatores",
+        "Short rotatores"
+      ],
+      "count": 11
+    },
+    {
+      "id": "rotatores-cervicis",
+      "name": "Rotatores cervicis",
+      "region": "Back",
+      "group": "Deep: transversospinales",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Rotatores colli"
+      ]
+    },
+    {
+      "id": "interspinales-cervicis",
+      "name": "Interspinales cervicis",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 6,
+      "aka": [
+        "Interspinales colli"
+      ]
+    },
+    {
+      "id": "interspinales-thoracis",
+      "name": "Interspinales thoracis",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Present only at the upper and lower ends of the thoracic spine."
+    },
+    {
+      "id": "interspinales-lumborum",
+      "name": "Interspinales lumborum",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 4
+    },
+    {
+      "id": "anterior-cervical-intertransversarii",
+      "name": "Anterior cervical intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 7
+    },
+    {
+      "id": "lateral-posterior-cervical-intertransversarii",
+      "name": "Lateral posterior cervical intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 7
+    },
+    {
+      "id": "medial-posterior-cervical-intertransversarii",
+      "name": "Medial posterior cervical intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 7
+    },
+    {
+      "id": "thoracic-intertransversarii",
+      "name": "Thoracic intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "lateral-lumbar-intertransversarii",
+      "name": "Lateral lumbar intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Dorsal part",
+        "Ventral part"
+      ]
+    },
+    {
+      "id": "medial-lumbar-intertransversarii",
+      "name": "Medial lumbar intertransversarii",
+      "region": "Back",
+      "group": "Deep: segmental",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "pectoralis-major",
+      "name": "Pectoralis major",
+      "region": "Thorax",
+      "group": "Pectoral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Clavicular head",
+        "Sternocostal head",
+        "Abdominal part"
+      ],
+      "aka": [
+        "Pecs"
+      ]
+    },
+    {
+      "id": "pectoralis-minor",
+      "name": "Pectoralis minor",
+      "region": "Thorax",
+      "group": "Pectoral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "subclavius",
+      "name": "Subclavius",
+      "region": "Thorax",
+      "group": "Pectoral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "serratus-anterior",
+      "name": "Serratus anterior",
+      "region": "Thorax",
+      "group": "Pectoral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Boxer's muscle"
+      ]
+    },
+    {
+      "id": "sternalis",
+      "name": "Sternalis",
+      "region": "Thorax",
+      "group": "Pectoral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Present in only a small minority of people."
+    },
+    {
+      "id": "external-intercostals",
+      "name": "External intercostals",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 11
+    },
+    {
+      "id": "internal-intercostals",
+      "name": "Internal intercostals",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 11
+    },
+    {
+      "id": "innermost-intercostals",
+      "name": "Innermost intercostals",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Intercostales intimi"
+      ]
+    },
+    {
+      "id": "subcostales",
+      "name": "Subcostales",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Subcostal muscles"
+      ],
+      "note": "Number varies; best developed low on the back of the chest wall."
+    },
+    {
+      "id": "transversus-thoracis",
+      "name": "Transversus thoracis",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Sternocostalis"
+      ]
+    },
+    {
+      "id": "levatores-costarum",
+      "name": "Levatores costarum",
+      "region": "Thorax",
+      "group": "Intercostal & costal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Short (breves)",
+        "Long (longi)"
+      ],
+      "count": 12
+    },
+    {
+      "id": "diaphragm",
+      "name": "Diaphragm",
+      "region": "Thorax",
+      "group": "Diaphragm",
+      "type": "skeletal",
+      "paired": false,
+      "variable": false,
+      "parts": [
+        "Sternal part",
+        "Costal part",
+        "Lumbar part (right and left crura)"
+      ],
+      "aka": [
+        "Thoracic diaphragm"
+      ]
+    },
+    {
+      "id": "rectus-abdominis",
+      "name": "Rectus abdominis",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Abs"
+      ],
+      "note": "Tendinous intersections divide it into the \"six-pack\" segments."
+    },
+    {
+      "id": "pyramidalis",
+      "name": "Pyramidalis",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true
+    },
+    {
+      "id": "external-oblique",
+      "name": "External oblique",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Obliquus externus abdominis"
+      ]
+    },
+    {
+      "id": "internal-oblique",
+      "name": "Internal oblique",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Obliquus internus abdominis"
+      ]
+    },
+    {
+      "id": "transversus-abdominis",
+      "name": "Transversus abdominis",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Transverse abdominal",
+        "TVA"
+      ]
+    },
+    {
+      "id": "cremaster",
+      "name": "Cremaster",
+      "region": "Abdomen",
+      "group": "Anterolateral wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Surrounds the spermatic cord and testis; in females a few fibers follow the round ligament."
+    },
+    {
+      "id": "quadratus-lumborum",
+      "name": "Quadratus lumborum",
+      "region": "Abdomen",
+      "group": "Posterior wall",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "QL"
+      ]
+    },
+    {
+      "id": "pubococcygeus",
+      "name": "Pubococcygeus",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Pubovisceralis"
+      ]
+    },
+    {
+      "id": "puboperinealis",
+      "name": "Puboperinealis",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "pubovaginalis-puboprostaticus",
+      "name": "Pubovaginalis / Puboprostaticus",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Pubovaginalis in females; puboprostaticus (levator prostatae) in males."
+    },
+    {
+      "id": "puboanalis",
+      "name": "Puboanalis",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "puborectalis",
+      "name": "Puborectalis",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "iliococcygeus",
+      "name": "Iliococcygeus",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: levator ani",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "coccygeus",
+      "name": "Coccygeus",
+      "region": "Pelvis & perineum",
+      "group": "Pelvic floor: coccygeus",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Ischiococcygeus"
+      ]
+    },
+    {
+      "id": "external-anal-sphincter",
+      "name": "External anal sphincter",
+      "region": "Pelvis & perineum",
+      "group": "Anal triangle",
+      "type": "skeletal",
+      "paired": false,
+      "variable": false,
+      "parts": [
+        "Subcutaneous part",
+        "Superficial part",
+        "Deep part"
+      ]
+    },
+    {
+      "id": "superficial-transverse-perineal",
+      "name": "Superficial transverse perineal",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: superficial pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "ischiocavernosus",
+      "name": "Ischiocavernosus",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: superficial pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "bulbospongiosus",
+      "name": "Bulbospongiosus",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: superficial pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Bulbocavernosus"
+      ]
+    },
+    {
+      "id": "deep-transverse-perineal",
+      "name": "Deep transverse perineal",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: deep pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Well developed in males; in females largely replaced by smooth muscle."
+    },
+    {
+      "id": "external-urethral-sphincter",
+      "name": "External urethral sphincter",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: deep pouch",
+      "type": "skeletal",
+      "paired": false,
+      "variable": false,
+      "aka": [
+        "Sphincter urethrae"
+      ]
+    },
+    {
+      "id": "compressor-urethrae",
+      "name": "Compressor urethrae",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: deep pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Female."
+    },
+    {
+      "id": "sphincter-urethrovaginalis",
+      "name": "Sphincter urethrovaginalis",
+      "region": "Pelvis & perineum",
+      "group": "Urogenital triangle: deep pouch",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Female."
+    },
+    {
+      "id": "deltoid",
+      "name": "Deltoid",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Clavicular part (anterior)",
+        "Acromial part (middle)",
+        "Spinal part (posterior)"
+      ],
+      "aka": [
+        "Delts"
+      ]
+    },
+    {
+      "id": "supraspinatus",
+      "name": "Supraspinatus",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Rotator cuff."
+    },
+    {
+      "id": "infraspinatus",
+      "name": "Infraspinatus",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Rotator cuff."
+    },
+    {
+      "id": "teres-minor",
+      "name": "Teres minor",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Rotator cuff."
+    },
+    {
+      "id": "subscapularis",
+      "name": "Subscapularis",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Rotator cuff."
+    },
+    {
+      "id": "teres-major",
+      "name": "Teres major",
+      "region": "Upper limb",
+      "group": "Shoulder",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "biceps-brachii",
+      "name": "Biceps brachii",
+      "region": "Upper limb",
+      "group": "Arm: anterior (flexor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Long head",
+        "Short head"
+      ]
+    },
+    {
+      "id": "coracobrachialis",
+      "name": "Coracobrachialis",
+      "region": "Upper limb",
+      "group": "Arm: anterior (flexor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "brachialis",
+      "name": "Brachialis",
+      "region": "Upper limb",
+      "group": "Arm: anterior (flexor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "triceps-brachii",
+      "name": "Triceps brachii",
+      "region": "Upper limb",
+      "group": "Arm: posterior (extensor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Long head",
+        "Lateral head",
+        "Medial head"
+      ]
+    },
+    {
+      "id": "anconeus",
+      "name": "Anconeus",
+      "region": "Upper limb",
+      "group": "Arm: posterior (extensor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "articularis-cubiti",
+      "name": "Articularis cubiti",
+      "region": "Upper limb",
+      "group": "Arm: posterior (extensor) compartment",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Subanconeus"
+      ]
+    },
+    {
+      "id": "pronator-teres",
+      "name": "Pronator teres",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Humeral head",
+        "Ulnar head"
+      ]
+    },
+    {
+      "id": "flexor-carpi-radialis",
+      "name": "Flexor carpi radialis",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "palmaris-longus",
+      "name": "Palmaris longus",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Absent in some people, often on one side only."
+    },
+    {
+      "id": "flexor-carpi-ulnaris",
+      "name": "Flexor carpi ulnaris",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Humeral head",
+        "Ulnar head"
+      ]
+    },
+    {
+      "id": "flexor-digitorum-superficialis",
+      "name": "Flexor digitorum superficialis",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, intermediate",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Humero-ulnar head",
+        "Radial head"
+      ]
+    },
+    {
+      "id": "flexor-digitorum-profundus",
+      "name": "Flexor digitorum profundus",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-pollicis-longus",
+      "name": "Flexor pollicis longus",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "pronator-quadratus",
+      "name": "Pronator quadratus",
+      "region": "Upper limb",
+      "group": "Forearm: anterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "brachioradialis",
+      "name": "Brachioradialis",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-carpi-radialis-longus",
+      "name": "Extensor carpi radialis longus",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-carpi-radialis-brevis",
+      "name": "Extensor carpi radialis brevis",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-digitorum",
+      "name": "Extensor digitorum",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-digiti-minimi",
+      "name": "Extensor digiti minimi",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-carpi-ulnaris",
+      "name": "Extensor carpi ulnaris",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, superficial",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Humeral head",
+        "Ulnar head"
+      ]
+    },
+    {
+      "id": "supinator",
+      "name": "Supinator",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-pollicis-longus",
+      "name": "Abductor pollicis longus",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-pollicis-brevis",
+      "name": "Extensor pollicis brevis",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-pollicis-longus",
+      "name": "Extensor pollicis longus",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-indicis",
+      "name": "Extensor indicis",
+      "region": "Upper limb",
+      "group": "Forearm: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-pollicis-brevis",
+      "name": "Abductor pollicis brevis",
+      "region": "Upper limb",
+      "group": "Hand: thenar & adductor",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-pollicis-brevis",
+      "name": "Flexor pollicis brevis",
+      "region": "Upper limb",
+      "group": "Hand: thenar & adductor",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Superficial head",
+        "Deep head"
+      ]
+    },
+    {
+      "id": "opponens-pollicis",
+      "name": "Opponens pollicis",
+      "region": "Upper limb",
+      "group": "Hand: thenar & adductor",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "adductor-pollicis",
+      "name": "Adductor pollicis",
+      "region": "Upper limb",
+      "group": "Hand: thenar & adductor",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Oblique head",
+        "Transverse head"
+      ]
+    },
+    {
+      "id": "palmaris-brevis",
+      "name": "Palmaris brevis",
+      "region": "Upper limb",
+      "group": "Hand: hypothenar",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-digiti-minimi-hand",
+      "name": "Abductor digiti minimi (hand)",
+      "region": "Upper limb",
+      "group": "Hand: hypothenar",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-digiti-minimi-brevis-hand",
+      "name": "Flexor digiti minimi brevis (hand)",
+      "region": "Upper limb",
+      "group": "Hand: hypothenar",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "opponens-digiti-minimi-hand",
+      "name": "Opponens digiti minimi (hand)",
+      "region": "Upper limb",
+      "group": "Hand: hypothenar",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "lumbricals-hand",
+      "name": "Lumbricals (hand)",
+      "region": "Upper limb",
+      "group": "Hand: lumbricals & interossei",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 4
+    },
+    {
+      "id": "dorsal-interossei-hand",
+      "name": "Dorsal interossei (hand)",
+      "region": "Upper limb",
+      "group": "Hand: lumbricals & interossei",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 4
+    },
+    {
+      "id": "palmar-interossei",
+      "name": "Palmar interossei",
+      "region": "Upper limb",
+      "group": "Hand: lumbricals & interossei",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 3
+    },
+    {
+      "id": "pollical-palmar-interosseus",
+      "name": "Pollical palmar interosseus",
+      "region": "Upper limb",
+      "group": "Hand: lumbricals & interossei",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Debated; often regarded as the deep head of flexor pollicis brevis."
+    },
+    {
+      "id": "psoas-major",
+      "name": "Psoas major",
+      "region": "Lower limb",
+      "group": "Hip: iliopsoas",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "psoas-minor",
+      "name": "Psoas minor",
+      "region": "Lower limb",
+      "group": "Hip: iliopsoas",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Absent in a large share of people."
+    },
+    {
+      "id": "iliacus",
+      "name": "Iliacus",
+      "region": "Lower limb",
+      "group": "Hip: iliopsoas",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "gluteus-maximus",
+      "name": "Gluteus maximus",
+      "region": "Lower limb",
+      "group": "Gluteal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Glutes"
+      ],
+      "note": "The largest single muscle in the body."
+    },
+    {
+      "id": "gluteus-medius",
+      "name": "Gluteus medius",
+      "region": "Lower limb",
+      "group": "Gluteal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "gluteus-minimus",
+      "name": "Gluteus minimus",
+      "region": "Lower limb",
+      "group": "Gluteal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tensor-fasciae-latae",
+      "name": "Tensor fasciae latae",
+      "region": "Lower limb",
+      "group": "Gluteal",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "TFL"
+      ]
+    },
+    {
+      "id": "piriformis",
+      "name": "Piriformis",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "superior-gemellus",
+      "name": "Superior gemellus",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Gemellus superior"
+      ]
+    },
+    {
+      "id": "obturator-internus",
+      "name": "Obturator internus",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "inferior-gemellus",
+      "name": "Inferior gemellus",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Gemellus inferior"
+      ]
+    },
+    {
+      "id": "quadratus-femoris",
+      "name": "Quadratus femoris",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "obturator-externus",
+      "name": "Obturator externus",
+      "region": "Lower limb",
+      "group": "Hip: deep lateral rotators",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Grouped with the adductors by its nerve supply (obturator nerve)."
+    },
+    {
+      "id": "sartorius",
+      "name": "Sartorius",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "The longest muscle in the body."
+    },
+    {
+      "id": "rectus-femoris",
+      "name": "Rectus femoris",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Straight head",
+        "Reflected head"
+      ],
+      "note": "Quadriceps femoris."
+    },
+    {
+      "id": "vastus-lateralis",
+      "name": "Vastus lateralis",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Quadriceps femoris."
+    },
+    {
+      "id": "vastus-intermedius",
+      "name": "Vastus intermedius",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Quadriceps femoris."
+    },
+    {
+      "id": "vastus-medialis",
+      "name": "Vastus medialis",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "Quadriceps femoris; its lowest fibers are called vastus medialis obliquus (VMO)."
+    },
+    {
+      "id": "articularis-genus",
+      "name": "Articularis genus",
+      "region": "Lower limb",
+      "group": "Thigh: anterior (quadriceps & sartorius)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "pectineus",
+      "name": "Pectineus",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "adductor-longus",
+      "name": "Adductor longus",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "adductor-brevis",
+      "name": "Adductor brevis",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "adductor-magnus",
+      "name": "Adductor magnus",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Adductor part",
+        "Hamstring (ischiocondylar) part"
+      ]
+    },
+    {
+      "id": "adductor-minimus",
+      "name": "Adductor minimus",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "The upper portion of adductor magnus, sometimes separate."
+    },
+    {
+      "id": "gracilis",
+      "name": "Gracilis",
+      "region": "Lower limb",
+      "group": "Thigh: medial (adductors)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "biceps-femoris",
+      "name": "Biceps femoris",
+      "region": "Lower limb",
+      "group": "Thigh: posterior (hamstrings)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Long head",
+        "Short head"
+      ]
+    },
+    {
+      "id": "semitendinosus",
+      "name": "Semitendinosus",
+      "region": "Lower limb",
+      "group": "Thigh: posterior (hamstrings)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "semimembranosus",
+      "name": "Semimembranosus",
+      "region": "Lower limb",
+      "group": "Thigh: posterior (hamstrings)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tibialis-anterior",
+      "name": "Tibialis anterior",
+      "region": "Lower limb",
+      "group": "Leg: anterior",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-hallucis-longus",
+      "name": "Extensor hallucis longus",
+      "region": "Lower limb",
+      "group": "Leg: anterior",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-digitorum-longus",
+      "name": "Extensor digitorum longus",
+      "region": "Lower limb",
+      "group": "Leg: anterior",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "fibularis-tertius",
+      "name": "Fibularis tertius",
+      "region": "Lower limb",
+      "group": "Leg: anterior",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Peroneus tertius"
+      ]
+    },
+    {
+      "id": "fibularis-longus",
+      "name": "Fibularis longus",
+      "region": "Lower limb",
+      "group": "Leg: lateral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Peroneus longus"
+      ]
+    },
+    {
+      "id": "fibularis-brevis",
+      "name": "Fibularis brevis",
+      "region": "Lower limb",
+      "group": "Leg: lateral",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Peroneus brevis"
+      ]
+    },
+    {
+      "id": "gastrocnemius",
+      "name": "Gastrocnemius",
+      "region": "Lower limb",
+      "group": "Leg: posterior, superficial (calf)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Medial head",
+        "Lateral head"
+      ],
+      "note": "With soleus, forms triceps surae (the calf)."
+    },
+    {
+      "id": "soleus",
+      "name": "Soleus",
+      "region": "Lower limb",
+      "group": "Leg: posterior, superficial (calf)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "note": "With gastrocnemius, forms triceps surae (the calf)."
+    },
+    {
+      "id": "plantaris",
+      "name": "Plantaris",
+      "region": "Lower limb",
+      "group": "Leg: posterior, superficial (calf)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true
+    },
+    {
+      "id": "popliteus",
+      "name": "Popliteus",
+      "region": "Lower limb",
+      "group": "Leg: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-hallucis-longus",
+      "name": "Flexor hallucis longus",
+      "region": "Lower limb",
+      "group": "Leg: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-digitorum-longus",
+      "name": "Flexor digitorum longus",
+      "region": "Lower limb",
+      "group": "Leg: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "tibialis-posterior",
+      "name": "Tibialis posterior",
+      "region": "Lower limb",
+      "group": "Leg: posterior, deep",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-digitorum-brevis",
+      "name": "Extensor digitorum brevis",
+      "region": "Lower limb",
+      "group": "Foot: dorsum",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "extensor-hallucis-brevis",
+      "name": "Extensor hallucis brevis",
+      "region": "Lower limb",
+      "group": "Foot: dorsum",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-hallucis",
+      "name": "Abductor hallucis",
+      "region": "Lower limb",
+      "group": "Foot: sole, 1st layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "flexor-digitorum-brevis",
+      "name": "Flexor digitorum brevis",
+      "region": "Lower limb",
+      "group": "Foot: sole, 1st layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-digiti-minimi-foot",
+      "name": "Abductor digiti minimi (foot)",
+      "region": "Lower limb",
+      "group": "Foot: sole, 1st layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "abductor-ossis-metatarsi-quinti",
+      "name": "Abductor ossis metatarsi quinti",
+      "region": "Lower limb",
+      "group": "Foot: sole, 1st layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Abductor of fifth metatarsal"
+      ]
+    },
+    {
+      "id": "quadratus-plantae",
+      "name": "Quadratus plantae",
+      "region": "Lower limb",
+      "group": "Foot: sole, 2nd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "aka": [
+        "Flexor accessorius"
+      ]
+    },
+    {
+      "id": "lumbricals-foot",
+      "name": "Lumbricals (foot)",
+      "region": "Lower limb",
+      "group": "Foot: sole, 2nd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 4
+    },
+    {
+      "id": "flexor-hallucis-brevis",
+      "name": "Flexor hallucis brevis",
+      "region": "Lower limb",
+      "group": "Foot: sole, 3rd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Medial head",
+        "Lateral head"
+      ]
+    },
+    {
+      "id": "adductor-hallucis",
+      "name": "Adductor hallucis",
+      "region": "Lower limb",
+      "group": "Foot: sole, 3rd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "parts": [
+        "Oblique head",
+        "Transverse head"
+      ]
+    },
+    {
+      "id": "flexor-digiti-minimi-brevis-foot",
+      "name": "Flexor digiti minimi brevis (foot)",
+      "region": "Lower limb",
+      "group": "Foot: sole, 3rd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false
+    },
+    {
+      "id": "opponens-digiti-minimi-foot",
+      "name": "Opponens digiti minimi (foot)",
+      "region": "Lower limb",
+      "group": "Foot: sole, 3rd layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Often fused with flexor digiti minimi brevis."
+    },
+    {
+      "id": "plantar-interossei",
+      "name": "Plantar interossei",
+      "region": "Lower limb",
+      "group": "Foot: sole, 4th layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 3
+    },
+    {
+      "id": "dorsal-interossei-foot",
+      "name": "Dorsal interossei (foot)",
+      "region": "Lower limb",
+      "group": "Foot: sole, 4th layer",
+      "type": "skeletal",
+      "paired": true,
+      "variable": false,
+      "count": 4
+    },
+    {
+      "id": "levator-claviculae",
+      "name": "Levator claviculae",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Neck; from the upper cervical vertebrae to the clavicle."
+    },
+    {
+      "id": "axillary-arch-muscle",
+      "name": "Axillary arch muscle",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Langer's axillary arch"
+      ],
+      "note": "Armpit; a slip from latissimus dorsi crossing the axilla."
+    },
+    {
+      "id": "chondroepitrochlearis",
+      "name": "Chondroepitrochlearis",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Chest to arm; a slip from pectoralis major toward the medial epicondyle."
+    },
+    {
+      "id": "anconeus-epitrochlearis",
+      "name": "Anconeus epitrochlearis",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Epitrochleoanconeus"
+      ],
+      "note": "Elbow; bridges the cubital tunnel over the ulnar nerve."
+    },
+    {
+      "id": "gantzer-s-muscle",
+      "name": "Gantzer's muscle",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Accessory head of flexor pollicis longus"
+      ],
+      "note": "Forearm; one of the most common forearm variants."
+    },
+    {
+      "id": "extensor-digitorum-brevis-manus",
+      "name": "Extensor digitorum brevis manus",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Back of the hand; can be mistaken for a ganglion cyst."
+    },
+    {
+      "id": "fibularis-quartus",
+      "name": "Fibularis quartus",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "aka": [
+        "Peroneus quartus"
+      ],
+      "note": "Outer ankle."
+    },
+    {
+      "id": "accessory-soleus",
+      "name": "Accessory soleus",
+      "region": "Anatomical variants",
+      "group": "Well-documented extra muscles (not in Terminologia Anatomica)",
+      "type": "skeletal",
+      "paired": true,
+      "variable": true,
+      "note": "Calf; can be mistaken for a soft-tissue mass."
+    },
+    {
+      "id": "ciliary-muscle",
+      "name": "Ciliary muscle",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "parts": [
+        "Meridional fibers (Brücke's muscle)",
+        "Radial fibers",
+        "Circular fibers (Müller's muscle)"
+      ]
+    },
+    {
+      "id": "sphincter-pupillae",
+      "name": "Sphincter pupillae",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Iris sphincter"
+      ]
+    },
+    {
+      "id": "dilator-pupillae",
+      "name": "Dilator pupillae",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Iris dilator"
+      ]
+    },
+    {
+      "id": "superior-tarsal",
+      "name": "Superior tarsal",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Müller's muscle"
+      ],
+      "note": "Smooth-muscle slip of levator palpebrae superioris."
+    },
+    {
+      "id": "inferior-tarsal",
+      "name": "Inferior tarsal",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "orbitalis",
+      "name": "Orbitalis",
+      "region": "Smooth & cardiac",
+      "group": "Eye (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Orbital muscle of Müller"
+      ],
+      "note": "Bridges the inferior orbital fissure."
+    },
+    {
+      "id": "arrector-pili",
+      "name": "Arrector pili",
+      "region": "Smooth & cardiac",
+      "group": "Skin (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "note": "One tiny muscle per hair follicle; millions in total."
+    },
+    {
+      "id": "dartos",
+      "name": "Dartos",
+      "region": "Smooth & cardiac",
+      "group": "Skin (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Tunica dartos"
+      ],
+      "note": "Scrotal skin; similar smooth muscle lies in the labia majora."
+    },
+    {
+      "id": "corrugator-cutis-ani",
+      "name": "Corrugator cutis ani",
+      "region": "Smooth & cardiac",
+      "group": "Skin (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "trachealis",
+      "name": "Trachealis",
+      "region": "Smooth & cardiac",
+      "group": "Airway (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "bronchoesophageus",
+      "name": "Bronchoesophageus",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "note": "Smooth-muscle band joining the esophagus to the left main bronchus."
+    },
+    {
+      "id": "pleuroesophageus",
+      "name": "Pleuroesophageus",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "note": "Smooth-muscle band joining the esophagus to the left mediastinal pleura."
+    },
+    {
+      "id": "pyloric-sphincter",
+      "name": "Pyloric sphincter",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "suspensory-muscle-of-duodenum",
+      "name": "Suspensory muscle of duodenum",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Ligament of Treitz"
+      ]
+    },
+    {
+      "id": "sphincter-of-hepatopancreatic-ampulla",
+      "name": "Sphincter of hepatopancreatic ampulla",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Sphincter of Oddi"
+      ]
+    },
+    {
+      "id": "sphincter-of-bile-duct",
+      "name": "Sphincter of bile duct",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Choledochal sphincter"
+      ]
+    },
+    {
+      "id": "sphincter-of-pancreatic-duct",
+      "name": "Sphincter of pancreatic duct",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "internal-anal-sphincter",
+      "name": "Internal anal sphincter",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "rectococcygeus",
+      "name": "Rectococcygeus",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "rectourethralis",
+      "name": "Rectourethralis",
+      "region": "Smooth & cardiac",
+      "group": "Digestive tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "note": "Male."
+    },
+    {
+      "id": "detrusor",
+      "name": "Detrusor",
+      "region": "Smooth & cardiac",
+      "group": "Urinary tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Detrusor vesicae"
+      ]
+    },
+    {
+      "id": "trigone-muscle",
+      "name": "Trigone muscle",
+      "region": "Smooth & cardiac",
+      "group": "Urinary tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "parts": [
+        "Superficial part",
+        "Deep part"
+      ]
+    },
+    {
+      "id": "internal-urethral-sphincter",
+      "name": "Internal urethral sphincter",
+      "region": "Smooth & cardiac",
+      "group": "Urinary tract (smooth)",
+      "type": "smooth",
+      "variable": false,
+      "aka": [
+        "Vesical sphincter"
+      ]
+    },
+    {
+      "id": "pubovesicalis",
+      "name": "Pubovesicalis",
+      "region": "Smooth & cardiac",
+      "group": "Urinary tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "rectovesicalis",
+      "name": "Rectovesicalis",
+      "region": "Smooth & cardiac",
+      "group": "Urinary tract (smooth)",
+      "type": "smooth",
+      "variable": false
+    },
+    {
+      "id": "myocardium",
+      "name": "Myocardium",
+      "region": "Smooth & cardiac",
+      "group": "Heart (cardiac)",
+      "type": "cardiac",
+      "variable": false,
+      "note": "The heart wall itself."
+    },
+    {
+      "id": "pectinate-muscles",
+      "name": "Pectinate muscles",
+      "region": "Smooth & cardiac",
+      "group": "Heart (cardiac)",
+      "type": "cardiac",
+      "variable": false,
+      "parts": [
+        "Right atrium",
+        "Left auricle"
+      ]
+    },
+    {
+      "id": "papillary-muscles-of-right-ventricle",
+      "name": "Papillary muscles of right ventricle",
+      "region": "Smooth & cardiac",
+      "group": "Heart (cardiac)",
+      "type": "cardiac",
+      "variable": false,
+      "parts": [
+        "Anterior",
+        "Posterior (inferior)",
+        "Septal"
+      ]
+    },
+    {
+      "id": "papillary-muscles-of-left-ventricle",
+      "name": "Papillary muscles of left ventricle",
+      "region": "Smooth & cardiac",
+      "group": "Heart (cardiac)",
+      "type": "cardiac",
+      "variable": false,
+      "parts": [
+        "Anterior (anterolateral)",
+        "Posterior (posteromedial)"
+      ]
+    },
+    {
+      "id": "trabeculae-carneae",
+      "name": "Trabeculae carneae",
+      "region": "Smooth & cardiac",
+      "group": "Heart (cardiac)",
+      "type": "cardiac",
+      "variable": false,
+      "parts": [
+        "Septomarginal trabecula (moderator band)"
+      ]
+    }
+  ]
+}
