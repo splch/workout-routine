@@ -1,0 +1,3009 @@
+{
+  "meta": {
+    "title": "Muscles worked by daily life",
+    "generated": "2026-09-12",
+    "scope": "Every muscle in muscles.json, rated by how much an ordinary day without exercise works it, with the everyday activities that do.",
+    "baseline": "An ordinary day for a healthy adult who does no exercise: sleep, washing and dressing, meals, conversation, sitting at a desk or table, a few thousand steps, a few flights of stairs, getting in and out of chairs, bed and a car, carrying bags, light chores, phone and keyboard use, and trips to the toilet.",
+    "conventions": [
+      "One entry per muscles.json entry, in the same order; 'id' and 'name' match muscles.json.",
+      "'tier' is a key of meta.tiers. 'activities' lists keys of meta.activities, most important first; it is empty when nothing in an ordinary day works the muscle.",
+      "Muscles not everyone has ('variable' in muscles.json) are rated for the people who have them.",
+      "Tiers say how often daily life works a muscle, not how hard. Most everyday use of the limb and trunk muscles is light.",
+      "Ratings are qualitative, from each muscle's known actions and, where studied, its activity in everyday movement. They are not measurements."
+    ],
+    "tiers": {
+      "nonstop": "Works around the clock, or every waking moment, with no effort from you: the heartbeat, breathing, eye movements and blinking, the airway, digestion, and the tone that keeps the bladder and bowel closed.",
+      "daily": "Works many times a day, or for long stretches, in things everyone does: sitting and standing, walking, getting up, eating, talking, facial expression, holding up and turning the head, using the hands.",
+      "occasional": "Works only in some situations, not every day for everyone: cold, arousal, deep labored breathing.",
+      "barely": "Vestigial, or no clear everyday action: little or no work in an ordinary day."
+    },
+    "activities": {
+      "heartbeat": "Heartbeat: The heart's own rhythm, about 100,000 beats a day.",
+      "breathing": "Breathing: Quiet breathing, roughly 20,000 breaths a day, plus sighs, yawns and harder breathing on stairs.",
+      "looking": "Looking & blinking: Eye movements, focusing, pupil changes, blinking and holding the eyes open.",
+      "expression": "Facial expression: Smiling, frowning, raising the eyebrows, squinting.",
+      "talking": "Talking: Voice and articulation.",
+      "eating": "Eating & swallowing: Biting, chewing, sipping and swallowing food, drink and saliva.",
+      "digestion": "Digestion: Moving food, bile and pancreatic juice along the gut, without any effort from you.",
+      "continence": "Bladder & bowel: Holding urine and stool around the clock, and emptying the bladder and bowel.",
+      "head": "Holding & turning the head: Keeping the head up while you sit or stand, looking around, nodding.",
+      "upright": "Sitting & standing: Holding the trunk upright and balancing on your feet.",
+      "walking": "Walking: Everyday walking on level ground.",
+      "stairs": "Stairs & slopes: Climbing and descending stairs, curbs and hills.",
+      "rising": "Getting up & down: Getting into and out of chairs, bed, the toilet and a car; sitting up in bed.",
+      "bending": "Bending & picking up: Bending over to pick things up, load a dishwasher or tie your shoes.",
+      "carrying": "Lifting & carrying: Bags, groceries, laundry, children, boxes.",
+      "reaching": "Reaching & dressing: Reaching forward and overhead, dressing, washing and brushing your hair.",
+      "pushing": "Pushing & pulling: Doors, drawers, carts, a vacuum cleaner.",
+      "gripping": "Gripping: Holding a phone, cup, bag or rail; opening jars; turning keys and doorknobs.",
+      "fine": "Fine hand work: Typing, writing, tapping a phone, doing up buttons, using cutlery.",
+      "forced": "Coughing & straining: Forced breathing out and bearing down: coughs, sneezes, laughs, straining on the toilet, bracing for a lift.",
+      "reflexes": "Reflexes: Automatic responses to cold, touch, loud sound or a startle.",
+      "sexual": "Sexual function: Erection, arousal and ejaculation."
+    },
+    "counts": {
+      "by_tier": {
+        "nonstop": 44,
+        "daily": 226,
+        "occasional": 5,
+        "barely": 25
+      },
+      "by_region": {
+        "Head": {
+          "nonstop": 9,
+          "daily": 38,
+          "occasional": 0,
+          "barely": 12
+        },
+        "Neck": {
+          "nonstop": 5,
+          "daily": 28,
+          "occasional": 0,
+          "barely": 3
+        },
+        "Back": {
+          "nonstop": 0,
+          "daily": 32,
+          "occasional": 2,
+          "barely": 1
+        },
+        "Thorax": {
+          "nonstop": 3,
+          "daily": 8,
+          "occasional": 0,
+          "barely": 1
+        },
+        "Abdomen": {
+          "nonstop": 0,
+          "daily": 5,
+          "occasional": 1,
+          "barely": 1
+        },
+        "Pelvis & perineum": {
+          "nonstop": 10,
+          "daily": 4,
+          "occasional": 1,
+          "barely": 0
+        },
+        "Upper limb": {
+          "nonstop": 0,
+          "daily": 43,
+          "occasional": 0,
+          "barely": 0
+        },
+        "Lower limb": {
+          "nonstop": 0,
+          "daily": 54,
+          "occasional": 0,
+          "barely": 1
+        },
+        "Anatomical variants": {
+          "nonstop": 0,
+          "daily": 8,
+          "occasional": 0,
+          "barely": 0
+        },
+        "Smooth & cardiac": {
+          "nonstop": 17,
+          "daily": 6,
+          "occasional": 1,
+          "barely": 6
+        }
+      },
+      "by_activity": {
+        "heartbeat": 5,
+        "breathing": 16,
+        "looking": 20,
+        "expression": 19,
+        "talking": 38,
+        "eating": 42,
+        "digestion": 6,
+        "continence": 22,
+        "head": 28,
+        "upright": 49,
+        "walking": 58,
+        "stairs": 10,
+        "rising": 20,
+        "bending": 11,
+        "carrying": 20,
+        "reaching": 15,
+        "pushing": 14,
+        "gripping": 30,
+        "fine": 28,
+        "forced": 17,
+        "reflexes": 8,
+        "sexual": 4
+      },
+      "in_some_exercise": {
+        "nonstop": 7,
+        "daily": 92,
+        "occasional": 0,
+        "barely": 0
+      },
+      "in_no_exercise": {
+        "nonstop": 37,
+        "daily": 134,
+        "occasional": 5,
+        "barely": 25
+      }
+    }
+  },
+  "muscles": [
+    {
+      "id": "levator-palpebrae-superioris",
+      "name": "Levator palpebrae superioris",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Holds the upper eyelid open every waking moment; relaxes for each blink and in sleep."
+    },
+    {
+      "id": "superior-rectus",
+      "name": "Superior rectus",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye up. The eye muscles work in every glance, about three quick jumps (saccades) a second while awake, and in REM sleep."
+    },
+    {
+      "id": "inferior-rectus",
+      "name": "Inferior rectus",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye down, as when reading or looking at a phone."
+    },
+    {
+      "id": "medial-rectus",
+      "name": "Medial rectus",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye inward; the two work together to converge on anything close, like a screen or a page."
+    },
+    {
+      "id": "lateral-rectus",
+      "name": "Lateral rectus",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye outward, as when glancing to the side."
+    },
+    {
+      "id": "superior-oblique",
+      "name": "Superior oblique",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye down and in and rotates it; needed for looking down while reading or going downstairs."
+    },
+    {
+      "id": "inferior-oblique",
+      "name": "Inferior oblique",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Turns the eye up and out and rotates it, keeping the view level when you tilt your head."
+    },
+    {
+      "id": "tensor-tympani",
+      "name": "Tensor tympani",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking",
+        "reflexes"
+      ],
+      "note": "Tightens the eardrum when you chew, swallow and yawn, and in a startle."
+    },
+    {
+      "id": "stapedius",
+      "name": "Stapedius",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "reflexes"
+      ],
+      "note": "Damps the smallest ear bone just before and while you speak, and reflexively to loud sounds."
+    },
+    {
+      "id": "occipitofrontalis",
+      "name": "Occipitofrontalis",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "looking"
+      ],
+      "note": "The frontal belly raises the eyebrows in surprise and when looking up; the occipital belly anchors the scalp."
+    },
+    {
+      "id": "temporoparietalis",
+      "name": "Temporoparietalis",
+      "tier": "barely",
+      "activities": [],
+      "note": "Thin, largely vestigial scalp sheet; little role in an ordinary day."
+    },
+    {
+      "id": "orbicularis-oculi",
+      "name": "Orbicularis oculi",
+      "tier": "nonstop",
+      "activities": [
+        "looking",
+        "expression"
+      ],
+      "note": "Closes the lids for every blink (about 15,000 a day), squints against glare and crinkles the eyes in a smile; its deep part helps drain tears."
+    },
+    {
+      "id": "corrugator-supercilii",
+      "name": "Corrugator supercilii",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "looking"
+      ],
+      "note": "Draws the brows together to frown, concentrate or squint against glare."
+    },
+    {
+      "id": "depressor-supercilii",
+      "name": "Depressor supercilii",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "looking"
+      ],
+      "note": "Pulls the brow down when frowning or shading the eyes from light."
+    },
+    {
+      "id": "procerus",
+      "name": "Procerus",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Pulls the skin between the brows down, wrinkling the bridge of the nose in a frown or squint."
+    },
+    {
+      "id": "nasalis",
+      "name": "Nasalis",
+      "tier": "daily",
+      "activities": [
+        "breathing",
+        "expression"
+      ],
+      "note": "Flares the nostrils when you sniff or breathe hard, and compresses them."
+    },
+    {
+      "id": "depressor-septi-nasi",
+      "name": "Depressor septi nasi",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "breathing"
+      ],
+      "note": "Pulls the tip of the nose down when you smile or talk and helps widen the nostrils on a deep breath."
+    },
+    {
+      "id": "orbicularis-oris",
+      "name": "Orbicularis oris",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating",
+        "expression"
+      ],
+      "note": "Closes and purses the lips for speech (p, b, m, w), sipping and keeping food and drink in the mouth."
+    },
+    {
+      "id": "buccinator",
+      "name": "Buccinator",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Holds the cheeks against the teeth to keep food between them while chewing; also used to suck and blow."
+    },
+    {
+      "id": "levator-labii-superioris",
+      "name": "Levator labii superioris",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "talking"
+      ],
+      "note": "Raises the upper lip in a broad smile, a sneer or speech."
+    },
+    {
+      "id": "levator-labii-superioris-alaeque-nasi",
+      "name": "Levator labii superioris alaeque nasi",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Lifts the upper lip and flares the nostril, as in a sneer or a broad smile."
+    },
+    {
+      "id": "levator-anguli-oris",
+      "name": "Levator anguli oris",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Lifts the corners of the mouth in a smile."
+    },
+    {
+      "id": "zygomaticus-major",
+      "name": "Zygomaticus major",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "talking"
+      ],
+      "note": "The main smiling muscle: draws the corners of the mouth up and out."
+    },
+    {
+      "id": "zygomaticus-minor",
+      "name": "Zygomaticus minor",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Lifts the upper lip to show the upper teeth when smiling."
+    },
+    {
+      "id": "risorius",
+      "name": "Risorius",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Where present, pulls the corners of the mouth sideways in a grin."
+    },
+    {
+      "id": "depressor-anguli-oris",
+      "name": "Depressor anguli oris",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "talking"
+      ],
+      "note": "Pulls the corners of the mouth down, as in a frown or grimace."
+    },
+    {
+      "id": "transversus-menti",
+      "name": "Transversus menti",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Where present, works with depressor anguli oris."
+    },
+    {
+      "id": "depressor-labii-inferioris",
+      "name": "Depressor labii inferioris",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "talking"
+      ],
+      "note": "Lowers the lower lip in speech, pouting and showing the lower teeth."
+    },
+    {
+      "id": "mentalis",
+      "name": "Mentalis",
+      "tier": "daily",
+      "activities": [
+        "expression",
+        "eating"
+      ],
+      "note": "Raises and pushes out the lower lip, as in pouting or sealing the lip against a cup, and wrinkles the chin."
+    },
+    {
+      "id": "anterior-auricular",
+      "name": "Anterior auricular",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial; pulls the ear forward only in people who can wiggle their ears."
+    },
+    {
+      "id": "superior-auricular",
+      "name": "Superior auricular",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial; lifts the ear only in people who can wiggle their ears."
+    },
+    {
+      "id": "posterior-auricular",
+      "name": "Posterior auricular",
+      "tier": "barely",
+      "activities": [
+        "reflexes"
+      ],
+      "note": "Vestigial; twitches reflexively to sudden sounds, too little to move the ear in most people."
+    },
+    {
+      "id": "helicis-major",
+      "name": "Helicis major",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "helicis-minor",
+      "name": "Helicis minor",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "tragicus",
+      "name": "Tragicus",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "pyramidal-muscle-of-auricle",
+      "name": "Pyramidal muscle of auricle",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "antitragicus",
+      "name": "Antitragicus",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "transverse-muscle-of-auricle",
+      "name": "Transverse muscle of auricle",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "oblique-muscle-of-auricle",
+      "name": "Oblique muscle of auricle",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "muscle-of-terminal-notch",
+      "name": "Muscle of terminal notch",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial ear-shape muscle; no useful action in humans."
+    },
+    {
+      "id": "masseter",
+      "name": "Masseter",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "The main chewing muscle: closes the jaw to bite and chew, and clenches the teeth."
+    },
+    {
+      "id": "temporalis",
+      "name": "Temporalis",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Closes and pulls back the jaw in chewing, and helps hold it closed at rest."
+    },
+    {
+      "id": "lateral-pterygoid",
+      "name": "Lateral pterygoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Opens the jaw and moves it forward and side to side, in chewing, talking and yawning."
+    },
+    {
+      "id": "medial-pterygoid",
+      "name": "Medial pterygoid",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Closes the jaw with the masseter and grinds food side to side."
+    },
+    {
+      "id": "pterygoideus-proprius",
+      "name": "Pterygoideus proprius",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Where present, works with the lateral pterygoid."
+    },
+    {
+      "id": "genioglossus",
+      "name": "Genioglossus",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "eating",
+        "talking"
+      ],
+      "note": "Pushes the tongue forward; its activity with each breath keeps the airway open, awake and asleep, and it shapes every swallow and word."
+    },
+    {
+      "id": "hyoglossus",
+      "name": "Hyoglossus",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Pulls the sides of the tongue down in chewing, swallowing and speech."
+    },
+    {
+      "id": "chondroglossus",
+      "name": "Chondroglossus",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Part of hyoglossus; works with it."
+    },
+    {
+      "id": "triticeoglossus",
+      "name": "Triticeoglossus",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Where present, pulls the tongue back and down with hyoglossus."
+    },
+    {
+      "id": "styloglossus",
+      "name": "Styloglossus",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Pulls the tongue up and back to start each swallow and to make sounds like k and g."
+    },
+    {
+      "id": "palatoglossus",
+      "name": "Palatoglossus",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Raises the back of the tongue and narrows the entrance to the throat in swallowing."
+    },
+    {
+      "id": "superior-longitudinal-muscle-of-tongue",
+      "name": "Superior longitudinal muscle of tongue",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating"
+      ],
+      "note": "Curls the tongue tip up for sounds like t, d and l, and moves food around the mouth."
+    },
+    {
+      "id": "inferior-longitudinal-muscle-of-tongue",
+      "name": "Inferior longitudinal muscle of tongue",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating"
+      ],
+      "note": "Curls the tongue tip down in speech and swallowing."
+    },
+    {
+      "id": "transverse-muscle-of-tongue",
+      "name": "Transverse muscle of tongue",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating"
+      ],
+      "note": "Narrows and lengthens the tongue, as for s sounds or sticking it out."
+    },
+    {
+      "id": "vertical-muscle-of-tongue",
+      "name": "Vertical muscle of tongue",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating"
+      ],
+      "note": "Flattens and widens the tongue in chewing and speech."
+    },
+    {
+      "id": "levator-veli-palatini",
+      "name": "Levator veli palatini",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Lifts the soft palate to seal off the nose in every swallow and most speech sounds."
+    },
+    {
+      "id": "tensor-veli-palatini",
+      "name": "Tensor veli palatini",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Tenses the soft palate and opens the Eustachian tube when you swallow or yawn, equalizing ear pressure."
+    },
+    {
+      "id": "musculus-uvulae",
+      "name": "Musculus uvulae",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Shortens and thickens the uvula to help seal off the nose."
+    },
+    {
+      "id": "palatopharyngeus",
+      "name": "Palatopharyngeus",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Raises the throat and closes off the nasal passage during swallowing."
+    },
+    {
+      "id": "platysma",
+      "name": "Platysma",
+      "tier": "daily",
+      "activities": [
+        "expression"
+      ],
+      "note": "Tenses the skin of the neck and pulls the mouth corners down in a grimace or when bracing."
+    },
+    {
+      "id": "sternocleidomastoid",
+      "name": "Sternocleidomastoid",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "breathing"
+      ],
+      "note": "Turns and tilts the head and lifts it off the pillow; lifts the breastbone in hard breathing."
+    },
+    {
+      "id": "digastric",
+      "name": "Digastric",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Opens the jaw, hardest in a yawn, and raises the hyoid bone in each swallow."
+    },
+    {
+      "id": "stylohyoid",
+      "name": "Stylohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Pulls the hyoid bone up and back when you swallow."
+    },
+    {
+      "id": "mylohyoid",
+      "name": "Mylohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Raises the floor of the mouth, pushing the tongue up in each swallow."
+    },
+    {
+      "id": "geniohyoid",
+      "name": "Geniohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Pulls the hyoid bone forward in swallowing, widening the throat, and helps open the jaw."
+    },
+    {
+      "id": "sternohyoid",
+      "name": "Sternohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Pulls the hyoid bone back down after each swallow and steadies it in speech."
+    },
+    {
+      "id": "omohyoid",
+      "name": "Omohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Pulls the hyoid bone down after swallowing and steadies it in speech."
+    },
+    {
+      "id": "sternothyroid",
+      "name": "Sternothyroid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Pulls the larynx down after swallowing and for low notes."
+    },
+    {
+      "id": "thyrohyoid",
+      "name": "Thyrohyoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Raises the larynx toward the hyoid bone in swallowing and speech."
+    },
+    {
+      "id": "levator-glandulae-thyroideae",
+      "name": "Levator glandulae thyroideae",
+      "tier": "barely",
+      "activities": [],
+      "note": "Inconstant band on the thyroid gland; no clear action."
+    },
+    {
+      "id": "longus-colli",
+      "name": "Longus colli",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Steadies the curve of the neck and bends it forward; works whenever you hold the head up or nod."
+    },
+    {
+      "id": "longus-capitis",
+      "name": "Longus capitis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Nods the head forward and steadies it on the neck."
+    },
+    {
+      "id": "rectus-capitis-anterior",
+      "name": "Rectus capitis anterior",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Nods the head at the skull joint and steadies it."
+    },
+    {
+      "id": "rectus-capitis-lateralis",
+      "name": "Rectus capitis lateralis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Tilts the head sideways and steadies it on the top vertebra."
+    },
+    {
+      "id": "anterior-scalene",
+      "name": "Anterior scalene",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "head"
+      ],
+      "note": "Lifts the first rib with every breath, quiet ones included, and bends the neck sideways."
+    },
+    {
+      "id": "middle-scalene",
+      "name": "Middle scalene",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "head"
+      ],
+      "note": "Lifts the first rib with every breath and bends the neck sideways."
+    },
+    {
+      "id": "posterior-scalene",
+      "name": "Posterior scalene",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "head"
+      ],
+      "note": "Lifts the second rib with every breath and bends the neck sideways."
+    },
+    {
+      "id": "scalenus-minimus",
+      "name": "Scalenus minimus",
+      "tier": "barely",
+      "activities": [],
+      "note": "Where present, tightens the membrane over the top of the lung; no clear everyday action."
+    },
+    {
+      "id": "rectus-capitis-posterior-major",
+      "name": "Rectus capitis posterior major",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "looking"
+      ],
+      "note": "Tips the head back and turns it; fine-tunes head position as the eyes move."
+    },
+    {
+      "id": "rectus-capitis-posterior-minor",
+      "name": "Rectus capitis posterior minor",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "looking"
+      ],
+      "note": "Tips the head back and steadies it; unusually rich in stretch sensors that track head position."
+    },
+    {
+      "id": "obliquus-capitis-superior",
+      "name": "Obliquus capitis superior",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "looking"
+      ],
+      "note": "Tips the head back and sideways in small posture adjustments."
+    },
+    {
+      "id": "obliquus-capitis-inferior",
+      "name": "Obliquus capitis inferior",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "looking"
+      ],
+      "note": "Turns the head at the top two vertebrae, as in looking over your shoulder."
+    },
+    {
+      "id": "superior-pharyngeal-constrictor",
+      "name": "Superior pharyngeal constrictor",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Squeezes food, drink and saliva down the throat in each swallow, several hundred times a day."
+    },
+    {
+      "id": "middle-pharyngeal-constrictor",
+      "name": "Middle pharyngeal constrictor",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Squeezes each swallow down the throat."
+    },
+    {
+      "id": "inferior-pharyngeal-constrictor",
+      "name": "Inferior pharyngeal constrictor",
+      "tier": "nonstop",
+      "activities": [
+        "eating",
+        "digestion"
+      ],
+      "note": "Squeezes each swallow down; its lowest part (cricopharyngeus) stays clenched day and night as the upper esophageal sphincter, opening only to let a swallow through."
+    },
+    {
+      "id": "stylopharyngeus",
+      "name": "Stylopharyngeus",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Lifts and widens the throat to take each swallow."
+    },
+    {
+      "id": "salpingopharyngeus",
+      "name": "Salpingopharyngeus",
+      "tier": "daily",
+      "activities": [
+        "eating"
+      ],
+      "note": "Raises the throat in swallowing and helps open the Eustachian tube."
+    },
+    {
+      "id": "cricothyroid",
+      "name": "Cricothyroid",
+      "tier": "daily",
+      "activities": [
+        "talking"
+      ],
+      "note": "Stretches the vocal folds to raise the pitch of the voice."
+    },
+    {
+      "id": "posterior-cricoarytenoid",
+      "name": "Posterior cricoarytenoid",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "talking"
+      ],
+      "note": "The only muscle that opens the vocal folds; widens them a little with every breath in, awake and asleep."
+    },
+    {
+      "id": "ceratocricoid",
+      "name": "Ceratocricoid",
+      "tier": "barely",
+      "activities": [],
+      "note": "Inconstant slip beside the posterior cricoarytenoid; its action, if any, is unclear."
+    },
+    {
+      "id": "lateral-cricoarytenoid",
+      "name": "Lateral cricoarytenoid",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "forced"
+      ],
+      "note": "Closes the vocal folds to make voice, and to hold the breath before a cough or a lift."
+    },
+    {
+      "id": "thyroarytenoid",
+      "name": "Thyroarytenoid",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating",
+        "forced"
+      ],
+      "note": "Shortens and closes the vocal folds for speech, and seals the airway in swallowing and coughing."
+    },
+    {
+      "id": "vocalis",
+      "name": "Vocalis",
+      "tier": "daily",
+      "activities": [
+        "talking"
+      ],
+      "note": "Fine-tunes the tension of the vocal folds for pitch and voice quality."
+    },
+    {
+      "id": "oblique-arytenoid",
+      "name": "Oblique arytenoid",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "talking"
+      ],
+      "note": "Closes the entrance to the larynx in each swallow and helps close the vocal folds."
+    },
+    {
+      "id": "transverse-arytenoid",
+      "name": "Transverse arytenoid",
+      "tier": "daily",
+      "activities": [
+        "talking",
+        "eating"
+      ],
+      "note": "Closes the back of the vocal folds for voice and in swallowing."
+    },
+    {
+      "id": "trapezius",
+      "name": "Trapezius",
+      "tier": "daily",
+      "activities": [
+        "carrying",
+        "reaching",
+        "head"
+      ],
+      "note": "The upper part holds up the shoulders against the weight of the arms and anything carried; the whole muscle turns the shoulder blade up when you reach overhead."
+    },
+    {
+      "id": "latissimus-dorsi",
+      "name": "Latissimus dorsi",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "pushing",
+        "forced"
+      ],
+      "note": "Pulls the arm down and back: pushing up from armrests or a bed, pulling a door, reaching into a back pocket; also squeezes the chest in a hard cough."
+    },
+    {
+      "id": "rhomboid-major",
+      "name": "Rhomboid major",
+      "tier": "daily",
+      "activities": [
+        "pushing",
+        "carrying",
+        "reaching"
+      ],
+      "note": "Pulls the shoulder blade back and steadies it when you pull, carry or reach."
+    },
+    {
+      "id": "rhomboid-minor",
+      "name": "Rhomboid minor",
+      "tier": "daily",
+      "activities": [
+        "pushing",
+        "carrying",
+        "reaching"
+      ],
+      "note": "Pulls the shoulder blade back and steadies it, with the major."
+    },
+    {
+      "id": "levator-scapulae",
+      "name": "Levator scapulae",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "carrying"
+      ],
+      "note": "Lifts the shoulder blade and bends the neck; works in shrugging, carrying and holding the head forward over a screen."
+    },
+    {
+      "id": "transversus-nuchae",
+      "name": "Transversus nuchae",
+      "tier": "barely",
+      "activities": [],
+      "note": "Inconstant slip over the top of the back of the neck; no clear action."
+    },
+    {
+      "id": "serratus-posterior-superior",
+      "name": "Serratus posterior superior",
+      "tier": "occasional",
+      "activities": [
+        "breathing"
+      ],
+      "note": "Textbooks say it lifts the upper ribs in deep breaths; direct evidence for any breathing role is thin."
+    },
+    {
+      "id": "serratus-posterior-inferior",
+      "name": "Serratus posterior inferior",
+      "tier": "occasional",
+      "activities": [
+        "breathing"
+      ],
+      "note": "Textbooks say it holds down the lower ribs in deep breaths; direct evidence for any breathing role is thin."
+    },
+    {
+      "id": "splenius-capitis",
+      "name": "Splenius capitis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the head up and turns it to the same side; works harder with the head forward over a phone or desk."
+    },
+    {
+      "id": "splenius-cervicis",
+      "name": "Splenius cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the neck extended and turns it."
+    },
+    {
+      "id": "iliocostalis-lumborum",
+      "name": "Iliocostalis lumborum",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "bending",
+        "carrying"
+      ],
+      "note": "Holds the lower back upright, lowers and raises the trunk when you bend, and braces it when you lift."
+    },
+    {
+      "id": "iliocostalis-thoracis",
+      "name": "Iliocostalis thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "bending"
+      ],
+      "note": "Holds the mid back upright and helps bend it sideways."
+    },
+    {
+      "id": "iliocostalis-cervicis",
+      "name": "Iliocostalis cervicis",
+      "tier": "daily",
+      "activities": [
+        "head",
+        "upright"
+      ],
+      "note": "Holds the lower neck extended."
+    },
+    {
+      "id": "longissimus-thoracis",
+      "name": "Longissimus thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "bending",
+        "carrying"
+      ],
+      "note": "The longest back extensor: keeps the trunk upright and controls every bend and lift."
+    },
+    {
+      "id": "longissimus-cervicis",
+      "name": "Longissimus cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the neck extended and bends it sideways."
+    },
+    {
+      "id": "longissimus-capitis",
+      "name": "Longissimus capitis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the head up and tips it back or to the side."
+    },
+    {
+      "id": "spinalis-thoracis",
+      "name": "Spinalis thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "bending"
+      ],
+      "note": "Holds the mid back extended."
+    },
+    {
+      "id": "spinalis-cervicis",
+      "name": "Spinalis cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Where present, holds the neck extended."
+    },
+    {
+      "id": "spinalis-capitis",
+      "name": "Spinalis capitis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the head up, blended with semispinalis capitis."
+    },
+    {
+      "id": "semispinalis-thoracis",
+      "name": "Semispinalis thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Holds the upper back extended and turns it slightly."
+    },
+    {
+      "id": "semispinalis-cervicis",
+      "name": "Semispinalis cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Holds the neck extended; a key deep stabilizer of the neck."
+    },
+    {
+      "id": "semispinalis-capitis",
+      "name": "Semispinalis capitis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "The main muscle holding the head up: works whenever you sit or stand, and harder when you look down."
+    },
+    {
+      "id": "multifidus",
+      "name": "Multifidus",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "walking",
+        "bending",
+        "carrying"
+      ],
+      "note": "Stiffens each spinal segment: switches on just before you move an arm or leg, and works in every step, bend and lift."
+    },
+    {
+      "id": "rotatores-lumborum",
+      "name": "Rotatores lumborum",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short segmental muscles packed with stretch sensors; steady and sense each vertebra in posture and twisting."
+    },
+    {
+      "id": "rotatores-thoracis",
+      "name": "Rotatores thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short segmental muscles packed with stretch sensors; steady and sense each vertebra in posture and twisting."
+    },
+    {
+      "id": "rotatores-cervicis",
+      "name": "Rotatores cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Short segmental muscles that steady and sense the neck vertebrae."
+    },
+    {
+      "id": "interspinales-cervicis",
+      "name": "Interspinales cervicis",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Short muscles between the spines of the neck vertebrae; steady the neck as it straightens."
+    },
+    {
+      "id": "interspinales-thoracis",
+      "name": "Interspinales thoracis",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short muscles between vertebral spines; steady the spine as it straightens."
+    },
+    {
+      "id": "interspinales-lumborum",
+      "name": "Interspinales lumborum",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "bending"
+      ],
+      "note": "Short muscles between vertebral spines; steady the lower back as it straightens."
+    },
+    {
+      "id": "anterior-cervical-intertransversarii",
+      "name": "Anterior cervical intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Short muscles between the side processes of the neck vertebrae; steady side bending and sense position."
+    },
+    {
+      "id": "lateral-posterior-cervical-intertransversarii",
+      "name": "Lateral posterior cervical intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Short muscles between the side processes of the neck vertebrae; steady side bending and sense position."
+    },
+    {
+      "id": "medial-posterior-cervical-intertransversarii",
+      "name": "Medial posterior cervical intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "head"
+      ],
+      "note": "Short muscles between the side processes of the neck vertebrae; steady side bending and sense position."
+    },
+    {
+      "id": "thoracic-intertransversarii",
+      "name": "Thoracic intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short muscles between the side processes; steady the spine in side bending."
+    },
+    {
+      "id": "lateral-lumbar-intertransversarii",
+      "name": "Lateral lumbar intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short muscles between the side processes of the lumbar vertebrae; steady side bending."
+    },
+    {
+      "id": "medial-lumbar-intertransversarii",
+      "name": "Medial lumbar intertransversarii",
+      "tier": "daily",
+      "activities": [
+        "upright"
+      ],
+      "note": "Short muscles between the lumbar vertebrae; steady and sense segment position."
+    },
+    {
+      "id": "pectoralis-major",
+      "name": "Pectoralis major",
+      "tier": "daily",
+      "activities": [
+        "pushing",
+        "carrying",
+        "reaching",
+        "rising"
+      ],
+      "note": "Brings the arm forward and across: pushing doors, carrying things in front of you, hugging, pushing up from a chair."
+    },
+    {
+      "id": "pectoralis-minor",
+      "name": "Pectoralis minor",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "pushing",
+        "breathing"
+      ],
+      "note": "Draws the shoulder blade forward and down when you reach or push; helps lift the ribs in deep breaths."
+    },
+    {
+      "id": "subclavius",
+      "name": "Subclavius",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "carrying"
+      ],
+      "note": "Steadies the collarbone against the breastbone as the arm moves."
+    },
+    {
+      "id": "serratus-anterior",
+      "name": "Serratus anterior",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "pushing"
+      ],
+      "note": "Holds the shoulder blade to the ribs and turns it up when you reach forward or overhead or push."
+    },
+    {
+      "id": "sternalis",
+      "name": "Sternalis",
+      "tier": "barely",
+      "activities": [],
+      "note": "Present in a small minority; no known action."
+    },
+    {
+      "id": "external-intercostals",
+      "name": "External intercostals",
+      "tier": "nonstop",
+      "activities": [
+        "breathing"
+      ],
+      "note": "Lift the ribs with every breath in and keep the chest wall firm."
+    },
+    {
+      "id": "internal-intercostals",
+      "name": "Internal intercostals",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "forced",
+        "talking"
+      ],
+      "note": "The front parts help lift the ribs with every breath in; the side parts pull the ribs down in speech, coughing and forced breathing out."
+    },
+    {
+      "id": "innermost-intercostals",
+      "name": "Innermost intercostals",
+      "tier": "daily",
+      "activities": [
+        "forced",
+        "talking"
+      ],
+      "note": "Work with the internal intercostals, pulling the ribs down in speech, coughs and forced breaths out."
+    },
+    {
+      "id": "subcostales",
+      "name": "Subcostales",
+      "tier": "daily",
+      "activities": [
+        "forced"
+      ],
+      "note": "Thought to pull the lower ribs down with the internal intercostals."
+    },
+    {
+      "id": "transversus-thoracis",
+      "name": "Transversus thoracis",
+      "tier": "daily",
+      "activities": [
+        "forced",
+        "talking"
+      ],
+      "note": "Pulls the front of the ribs down when breathing out takes effort: speaking, coughing, laughing."
+    },
+    {
+      "id": "levatores-costarum",
+      "name": "Levatores costarum",
+      "tier": "daily",
+      "activities": [
+        "breathing",
+        "upright"
+      ],
+      "note": "Lift the ribs when you breathe in and help bend and turn the spine."
+    },
+    {
+      "id": "diaphragm",
+      "name": "Diaphragm",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "forced",
+        "continence"
+      ],
+      "note": "The main breathing muscle: contracts with every breath, roughly 20,000 a day, awake and asleep. Also pushes down to cough, sneeze, strain on the toilet and brace for a lift."
+    },
+    {
+      "id": "rectus-abdominis",
+      "name": "Rectus abdominis",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "forced",
+        "bending"
+      ],
+      "note": "Curls the trunk to sit up in bed or from a sofa, and squeezes the belly in coughs, laughs and straining."
+    },
+    {
+      "id": "pyramidalis",
+      "name": "Pyramidalis",
+      "tier": "barely",
+      "activities": [],
+      "note": "Where present, tenses the midline of the belly wall; no clear everyday role."
+    },
+    {
+      "id": "external-oblique",
+      "name": "External oblique",
+      "tier": "daily",
+      "activities": [
+        "forced",
+        "upright",
+        "rising"
+      ],
+      "note": "Turns and side-bends the trunk, steadies it when you reach or carry, and squeezes the belly to cough, laugh or strain."
+    },
+    {
+      "id": "internal-oblique",
+      "name": "Internal oblique",
+      "tier": "daily",
+      "activities": [
+        "forced",
+        "upright",
+        "rising"
+      ],
+      "note": "Turns and side-bends the trunk with the external oblique; its lower fibers stay lightly active while you stand."
+    },
+    {
+      "id": "transversus-abdominis",
+      "name": "Transversus abdominis",
+      "tier": "daily",
+      "activities": [
+        "forced",
+        "upright",
+        "carrying",
+        "continence"
+      ],
+      "note": "Tightens the belly like a corset: switches on just before you move a limb, and in coughs, laughs, lifts and bearing down on the toilet."
+    },
+    {
+      "id": "cremaster",
+      "name": "Cremaster",
+      "tier": "occasional",
+      "activities": [
+        "reflexes",
+        "sexual"
+      ],
+      "note": "Lifts the testis in cold, when the inner thigh is touched (the cremasteric reflex) and in arousal; in females only a few fibers."
+    },
+    {
+      "id": "quadratus-lumborum",
+      "name": "Quadratus lumborum",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "carrying",
+        "upright"
+      ],
+      "note": "Hikes the hip and holds the trunk level when you walk or carry a bag in one hand; anchors the lowest rib for breathing."
+    },
+    {
+      "id": "pubococcygeus",
+      "name": "Pubococcygeus",
+      "tier": "nonstop",
+      "activities": [
+        "continence",
+        "upright",
+        "forced"
+      ],
+      "note": "Levator ani keeps a steady tone all day to hold up the pelvic organs, and clenches reflexively when you cough, sneeze, laugh or lift."
+    },
+    {
+      "id": "puboperinealis",
+      "name": "Puboperinealis",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Part of levator ani; supports the perineal body with the rest of the pelvic floor."
+    },
+    {
+      "id": "pubovaginalis-puboprostaticus",
+      "name": "Pubovaginalis / Puboprostaticus",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Part of levator ani; supports the vagina or prostate and helps close the urethra."
+    },
+    {
+      "id": "puboanalis",
+      "name": "Puboanalis",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Part of levator ani; supports the anal canal."
+    },
+    {
+      "id": "puborectalis",
+      "name": "Puborectalis",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Sling around the rectum that stays contracted to keep the bowel closed; relaxes only when you empty it."
+    },
+    {
+      "id": "iliococcygeus",
+      "name": "Iliococcygeus",
+      "tier": "nonstop",
+      "activities": [
+        "continence",
+        "upright"
+      ],
+      "note": "Part of levator ani; forms the back of the pelvic floor and holds up the pelvic organs."
+    },
+    {
+      "id": "coccygeus",
+      "name": "Coccygeus",
+      "tier": "daily",
+      "activities": [
+        "continence",
+        "upright"
+      ],
+      "note": "Supports the back of the pelvic floor and pulls the tailbone forward again after a bowel movement."
+    },
+    {
+      "id": "external-anal-sphincter",
+      "name": "External anal sphincter",
+      "tier": "nonstop",
+      "activities": [
+        "continence",
+        "forced"
+      ],
+      "note": "Keeps a steady clench day and night, tightens when you cough or hold in gas, and relaxes to let you empty the bowel."
+    },
+    {
+      "id": "superficial-transverse-perineal",
+      "name": "Superficial transverse perineal",
+      "tier": "daily",
+      "activities": [
+        "continence",
+        "forced"
+      ],
+      "note": "Steadies the perineal body, the pelvic floor's central anchor, when you cough, lift or strain."
+    },
+    {
+      "id": "ischiocavernosus",
+      "name": "Ischiocavernosus",
+      "tier": "occasional",
+      "activities": [
+        "sexual"
+      ],
+      "note": "Stiffens the erect penis or clitoris; works mainly in sexual activity."
+    },
+    {
+      "id": "bulbospongiosus",
+      "name": "Bulbospongiosus",
+      "tier": "daily",
+      "activities": [
+        "continence",
+        "sexual"
+      ],
+      "note": "In males, clears the last urine from the urethra after each void and expels semen; in females, narrows the vaginal opening."
+    },
+    {
+      "id": "deep-transverse-perineal",
+      "name": "Deep transverse perineal",
+      "tier": "daily",
+      "activities": [
+        "continence"
+      ],
+      "note": "Steadies the perineal body and supports the urethral sphincter."
+    },
+    {
+      "id": "external-urethral-sphincter",
+      "name": "External urethral sphincter",
+      "tier": "nonstop",
+      "activities": [
+        "continence",
+        "forced"
+      ],
+      "note": "Keeps the urethra closed around the clock and squeezes harder when you cough, laugh or need to hold on; relaxes to let you urinate."
+    },
+    {
+      "id": "compressor-urethrae",
+      "name": "Compressor urethrae",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Female; part of the urethral sphincter complex that keeps the urethra closed."
+    },
+    {
+      "id": "sphincter-urethrovaginalis",
+      "name": "Sphincter urethrovaginalis",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Female; wraps the urethra and vagina and helps keep the urethra closed."
+    },
+    {
+      "id": "deltoid",
+      "name": "Deltoid",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "carrying"
+      ],
+      "note": "Lifts the arm in every direction: reaching for a shelf, washing your hair, holding a bag away from the body."
+    },
+    {
+      "id": "supraspinatus",
+      "name": "Supraspinatus",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "carrying"
+      ],
+      "note": "Starts every arm raise and keeps the shoulder joint seated, even while a bag hangs from your hand."
+    },
+    {
+      "id": "infraspinatus",
+      "name": "Infraspinatus",
+      "tier": "daily",
+      "activities": [
+        "reaching"
+      ],
+      "note": "Turns the arm out and steadies the shoulder: brushing your hair, reaching to the side."
+    },
+    {
+      "id": "teres-minor",
+      "name": "Teres minor",
+      "tier": "daily",
+      "activities": [
+        "reaching"
+      ],
+      "note": "Turns the arm out and steadies the shoulder with infraspinatus."
+    },
+    {
+      "id": "subscapularis",
+      "name": "Subscapularis",
+      "tier": "daily",
+      "activities": [
+        "reaching",
+        "pushing"
+      ],
+      "note": "Turns the arm in and guards the front of the shoulder: tucking in a shirt, reaching behind your back, pushing."
+    },
+    {
+      "id": "teres-major",
+      "name": "Teres major",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "pushing"
+      ],
+      "note": "Pulls the arm down and back with the latissimus dorsi, as in pushing up from armrests or pulling a door."
+    },
+    {
+      "id": "biceps-brachii",
+      "name": "Biceps brachii",
+      "tier": "daily",
+      "activities": [
+        "eating",
+        "carrying",
+        "gripping"
+      ],
+      "note": "Bends the elbow and turns the palm up: bringing a fork or cup to your mouth, carrying bags on the forearm, turning a key."
+    },
+    {
+      "id": "coracobrachialis",
+      "name": "Coracobrachialis",
+      "tier": "daily",
+      "activities": [
+        "reaching"
+      ],
+      "note": "Brings the arm forward and across the body."
+    },
+    {
+      "id": "brachialis",
+      "name": "Brachialis",
+      "tier": "daily",
+      "activities": [
+        "carrying",
+        "eating"
+      ],
+      "note": "The main elbow bender whatever the palm's position; works whenever you lift something toward you."
+    },
+    {
+      "id": "triceps-brachii",
+      "name": "Triceps brachii",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "pushing"
+      ],
+      "note": "Straightens the elbow: pushing up from a chair or bed, pushing doors and carts."
+    },
+    {
+      "id": "anconeus",
+      "name": "Anconeus",
+      "tier": "daily",
+      "activities": [
+        "pushing"
+      ],
+      "note": "Helps straighten the elbow and steadies it as the forearm turns."
+    },
+    {
+      "id": "articularis-cubiti",
+      "name": "Articularis cubiti",
+      "tier": "daily",
+      "activities": [
+        "pushing"
+      ],
+      "note": "Draws the elbow capsule clear each time the arm straightens."
+    },
+    {
+      "id": "pronator-teres",
+      "name": "Pronator teres",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Turns the palm down, for typing or pouring, and helps bend the elbow."
+    },
+    {
+      "id": "flexor-carpi-radialis",
+      "name": "Flexor carpi radialis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Bends the wrist and steadies it in grip."
+    },
+    {
+      "id": "palmaris-longus",
+      "name": "Palmaris longus",
+      "tier": "daily",
+      "activities": [
+        "gripping"
+      ],
+      "note": "Where present, tenses the palm and weakly bends the wrist in grip."
+    },
+    {
+      "id": "flexor-carpi-ulnaris",
+      "name": "Flexor carpi ulnaris",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "carrying",
+        "fine"
+      ],
+      "note": "Bends the wrist toward the little finger and steadies it when you carry, hammer or type."
+    },
+    {
+      "id": "flexor-digitorum-superficialis",
+      "name": "Flexor digitorum superficialis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "carrying",
+        "fine"
+      ],
+      "note": "Bends the fingers in every grip: bags, cups, rails, phones."
+    },
+    {
+      "id": "flexor-digitorum-profundus",
+      "name": "Flexor digitorum profundus",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "carrying",
+        "fine"
+      ],
+      "note": "The only muscle that bends the fingertips; takes the load in hook grips such as carrying shopping bags."
+    },
+    {
+      "id": "flexor-pollicis-longus",
+      "name": "Flexor pollicis longus",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Bends the thumb tip for pinching, writing and texting."
+    },
+    {
+      "id": "pronator-quadratus",
+      "name": "Pronator quadratus",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "The main palm-down turner; also holds the forearm bones together when you grip or push."
+    },
+    {
+      "id": "brachioradialis",
+      "name": "Brachioradialis",
+      "tier": "daily",
+      "activities": [
+        "carrying",
+        "eating",
+        "gripping"
+      ],
+      "note": "Bends the elbow with the thumb up, as when lifting a mug or carrying a bag by its handle."
+    },
+    {
+      "id": "extensor-carpi-radialis-longus",
+      "name": "Extensor carpi radialis longus",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Holds the wrist cocked back during grip and typing."
+    },
+    {
+      "id": "extensor-carpi-radialis-brevis",
+      "name": "Extensor carpi radialis brevis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "The main wrist stabilizer in grip and typing; the muscle usually behind tennis elbow."
+    },
+    {
+      "id": "extensor-digitorum",
+      "name": "Extensor digitorum",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Straightens the fingers to let go of things, type and spread the hand."
+    },
+    {
+      "id": "extensor-digiti-minimi",
+      "name": "Extensor digiti minimi",
+      "tier": "daily",
+      "activities": [
+        "fine"
+      ],
+      "note": "Straightens the little finger."
+    },
+    {
+      "id": "extensor-carpi-ulnaris",
+      "name": "Extensor carpi ulnaris",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Steadies the wrist in grip and bends it toward the little finger, as when steering a mouse."
+    },
+    {
+      "id": "supinator",
+      "name": "Supinator",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Turns the palm up: turning a doorknob or key, using a screwdriver, holding out a hand."
+    },
+    {
+      "id": "abductor-pollicis-longus",
+      "name": "Abductor pollicis longus",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Swings the thumb out from the palm to open the hand around objects."
+    },
+    {
+      "id": "extensor-pollicis-brevis",
+      "name": "Extensor pollicis brevis",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Straightens the base of the thumb, in texting and in opening the hand to grip."
+    },
+    {
+      "id": "extensor-pollicis-longus",
+      "name": "Extensor pollicis longus",
+      "tier": "daily",
+      "activities": [
+        "fine"
+      ],
+      "note": "Straightens the thumb tip and pulls it back, lifting it off a phone screen or space bar."
+    },
+    {
+      "id": "extensor-indicis",
+      "name": "Extensor indicis",
+      "tier": "daily",
+      "activities": [
+        "fine"
+      ],
+      "note": "Straightens the index finger to point, tap a screen or click."
+    },
+    {
+      "id": "abductor-pollicis-brevis",
+      "name": "Abductor pollicis brevis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Moves the thumb away from the palm to wrap around a cup or phone."
+    },
+    {
+      "id": "flexor-pollicis-brevis",
+      "name": "Flexor pollicis brevis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Bends the thumb at its base in pinch and grip."
+    },
+    {
+      "id": "opponens-pollicis",
+      "name": "Opponens pollicis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Swings the thumb across the palm to meet the fingertips, the basis of every pinch and grasp."
+    },
+    {
+      "id": "adductor-pollicis",
+      "name": "Adductor pollicis",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Presses the thumb against the hand, as in holding keys, a card or a phone."
+    },
+    {
+      "id": "palmaris-brevis",
+      "name": "Palmaris brevis",
+      "tier": "daily",
+      "activities": [
+        "gripping"
+      ],
+      "note": "Wrinkles and cushions the skin at the little-finger edge of the palm to firm up a grip."
+    },
+    {
+      "id": "abductor-digiti-minimi-hand",
+      "name": "Abductor digiti minimi (hand)",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Spreads the little finger for a wide grip or a reach across the keyboard."
+    },
+    {
+      "id": "flexor-digiti-minimi-brevis-hand",
+      "name": "Flexor digiti minimi brevis (hand)",
+      "tier": "daily",
+      "activities": [
+        "gripping"
+      ],
+      "note": "Bends the little finger at its base."
+    },
+    {
+      "id": "opponens-digiti-minimi-hand",
+      "name": "Opponens digiti minimi (hand)",
+      "tier": "daily",
+      "activities": [
+        "gripping"
+      ],
+      "note": "Cups the palm by rolling the little finger toward the thumb."
+    },
+    {
+      "id": "lumbricals-hand",
+      "name": "Lumbricals (hand)",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Bend the knuckles while straightening the fingers: holding a card, typing, writing."
+    },
+    {
+      "id": "dorsal-interossei-hand",
+      "name": "Dorsal interossei (hand)",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Spread the fingers and steady them in grip and typing."
+    },
+    {
+      "id": "palmar-interossei",
+      "name": "Palmar interossei",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Draw the fingers together, as when holding a flat hand or a sheet of paper."
+    },
+    {
+      "id": "pollical-palmar-interosseus",
+      "name": "Pollical palmar interosseus",
+      "tier": "daily",
+      "activities": [
+        "fine",
+        "gripping"
+      ],
+      "note": "Where recognized, draws the thumb in with adductor pollicis."
+    },
+    {
+      "id": "psoas-major",
+      "name": "Psoas major",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "stairs",
+        "upright"
+      ],
+      "note": "Lifts the thigh in every step and stair and steadies the lower spine when you sit upright."
+    },
+    {
+      "id": "psoas-minor",
+      "name": "Psoas minor",
+      "tier": "barely",
+      "activities": [],
+      "note": "Absent in many people; where present, a weak helper in bending the lower trunk with no clear everyday job."
+    },
+    {
+      "id": "iliacus",
+      "name": "Iliacus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "stairs",
+        "upright"
+      ],
+      "note": "Swings the leg forward in every step with psoas major and tilts the pelvis to sit upright."
+    },
+    {
+      "id": "gluteus-maximus",
+      "name": "Gluteus maximus",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "stairs",
+        "bending",
+        "walking"
+      ],
+      "note": "Straightens the hip to stand up, climb stairs and come up from a bend; level walking uses little of it."
+    },
+    {
+      "id": "gluteus-medius",
+      "name": "Gluteus medius",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright",
+        "stairs"
+      ],
+      "note": "Keeps the pelvis level each time a foot leaves the ground, in every step and stair."
+    },
+    {
+      "id": "gluteus-minimus",
+      "name": "Gluteus minimus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Keeps the pelvis level and the hip steady with gluteus medius."
+    },
+    {
+      "id": "tensor-fasciae-latae",
+      "name": "Tensor fasciae latae",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Steadies the hip and knee through the iliotibial band in walking and standing."
+    },
+    {
+      "id": "piriformis",
+      "name": "Piriformis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Turns the thigh out and steadies the hip joint in walking and standing."
+    },
+    {
+      "id": "superior-gemellus",
+      "name": "Superior gemellus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Steadies the hip joint and turns the thigh out with the other deep rotators."
+    },
+    {
+      "id": "obturator-internus",
+      "name": "Obturator internus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Steadies the hip joint; part of the pelvic floor is anchored to its covering."
+    },
+    {
+      "id": "inferior-gemellus",
+      "name": "Inferior gemellus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Steadies the hip joint and turns the thigh out."
+    },
+    {
+      "id": "quadratus-femoris",
+      "name": "Quadratus femoris",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Turns the thigh out and steadies the hip joint."
+    },
+    {
+      "id": "obturator-externus",
+      "name": "Obturator externus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Turns the thigh out and steadies the hip joint."
+    },
+    {
+      "id": "sartorius",
+      "name": "Sartorius",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "rising"
+      ],
+      "note": "Bends and turns out the thigh and bends the knee: crossing your legs, stepping into a car, sitting cross-legged."
+    },
+    {
+      "id": "rectus-femoris",
+      "name": "Rectus femoris",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "stairs",
+        "rising"
+      ],
+      "note": "Straightens the knee and lifts the thigh: swinging each step forward, climbing stairs, standing up."
+    },
+    {
+      "id": "vastus-lateralis",
+      "name": "Vastus lateralis",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "stairs",
+        "walking"
+      ],
+      "note": "Straightens the knee to stand up and climb, and cushions each step and each stair on the way down."
+    },
+    {
+      "id": "vastus-intermedius",
+      "name": "Vastus intermedius",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "stairs",
+        "walking"
+      ],
+      "note": "Straightens the knee with the other vasti."
+    },
+    {
+      "id": "vastus-medialis",
+      "name": "Vastus medialis",
+      "tier": "daily",
+      "activities": [
+        "rising",
+        "stairs",
+        "walking"
+      ],
+      "note": "Straightens the knee and steadies the kneecap, especially as the leg straightens fully."
+    },
+    {
+      "id": "articularis-genus",
+      "name": "Articularis genus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "rising"
+      ],
+      "note": "Pulls the knee capsule up out of the way whenever the knee straightens."
+    },
+    {
+      "id": "pectineus",
+      "name": "Pectineus",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Draws the thigh forward and in during each step."
+    },
+    {
+      "id": "adductor-longus",
+      "name": "Adductor longus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Pulls the leg in and steadies the pelvis in walking and standing."
+    },
+    {
+      "id": "adductor-brevis",
+      "name": "Adductor brevis",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Pulls the leg in and helps bring it forward in each step."
+    },
+    {
+      "id": "adductor-magnus",
+      "name": "Adductor magnus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "rising",
+        "stairs"
+      ],
+      "note": "Its hamstring part straightens the hip to stand up and climb; its adductor part steadies the leg in each step."
+    },
+    {
+      "id": "adductor-minimus",
+      "name": "Adductor minimus",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Upper part of adductor magnus; works with it."
+    },
+    {
+      "id": "gracilis",
+      "name": "Gracilis",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Pulls the leg in, helps bend the knee and steadies the inner knee in each step."
+    },
+    {
+      "id": "biceps-femoris",
+      "name": "Biceps femoris",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "bending",
+        "rising"
+      ],
+      "note": "Brakes the swinging leg at the end of each step and helps straighten the hip when you rise from a bend or a chair."
+    },
+    {
+      "id": "semitendinosus",
+      "name": "Semitendinosus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "bending",
+        "rising"
+      ],
+      "note": "Brakes the swinging leg and helps straighten the hip, like biceps femoris; also steadies the inner knee."
+    },
+    {
+      "id": "semimembranosus",
+      "name": "Semimembranosus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "bending",
+        "rising"
+      ],
+      "note": "Brakes the leg at the end of each step and helps straighten the hip."
+    },
+    {
+      "id": "tibialis-anterior",
+      "name": "Tibialis anterior",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Lifts the foot in every step so the toes clear the ground, lowers it gently after heel strike, and corrects your balance when standing."
+    },
+    {
+      "id": "extensor-hallucis-longus",
+      "name": "Extensor hallucis longus",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Lifts the big toe and helps lift the foot in each step."
+    },
+    {
+      "id": "extensor-digitorum-longus",
+      "name": "Extensor digitorum longus",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Lifts the toes and foot so they clear the ground in each step."
+    },
+    {
+      "id": "fibularis-tertius",
+      "name": "Fibularis tertius",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Where present, lifts the outer edge of the foot as it swings through."
+    },
+    {
+      "id": "fibularis-longus",
+      "name": "Fibularis longus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Braces the ankle against rolling over and supports the arch in every step and in standing balance."
+    },
+    {
+      "id": "fibularis-brevis",
+      "name": "Fibularis brevis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Braces the ankle and turns the sole outward, guarding against ankle rolls."
+    },
+    {
+      "id": "gastrocnemius",
+      "name": "Gastrocnemius",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "stairs"
+      ],
+      "note": "Pushes off at the end of each step and lifts the heel on stairs; also bends the knee."
+    },
+    {
+      "id": "soleus",
+      "name": "Soleus",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "walking"
+      ],
+      "note": "Works continuously while you stand to keep you from tipping forward, pushes off in each step, and its squeeze pumps blood back up from the legs."
+    },
+    {
+      "id": "plantaris",
+      "name": "Plantaris",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Where present, a thin helper of the calf."
+    },
+    {
+      "id": "popliteus",
+      "name": "Popliteus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "rising"
+      ],
+      "note": "Unlocks the straightened knee so it can bend, as when you start to sit or take a step, and steadies it."
+    },
+    {
+      "id": "flexor-hallucis-longus",
+      "name": "Flexor hallucis longus",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Presses the big toe down for the final push-off of each step."
+    },
+    {
+      "id": "flexor-digitorum-longus",
+      "name": "Flexor digitorum longus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Curls the toes to grip the ground and helps hold up the arch."
+    },
+    {
+      "id": "tibialis-posterior",
+      "name": "Tibialis posterior",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Holds up the inner arch in every step and in standing."
+    },
+    {
+      "id": "extensor-digitorum-brevis",
+      "name": "Extensor digitorum brevis",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Lifts the toes with the long toe extensor."
+    },
+    {
+      "id": "extensor-hallucis-brevis",
+      "name": "Extensor hallucis brevis",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Lifts the big toe with the long extensor."
+    },
+    {
+      "id": "abductor-hallucis",
+      "name": "Abductor hallucis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Supports the inner arch and steadies the big toe in standing and push-off."
+    },
+    {
+      "id": "flexor-digitorum-brevis",
+      "name": "Flexor digitorum brevis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Curls the toes and firms the arch as you push off and balance."
+    },
+    {
+      "id": "abductor-digiti-minimi-foot",
+      "name": "Abductor digiti minimi (foot)",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Supports the outer edge of the foot in standing and walking."
+    },
+    {
+      "id": "abductor-ossis-metatarsi-quinti",
+      "name": "Abductor ossis metatarsi quinti",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Where present, helps the muscles of the outer foot."
+    },
+    {
+      "id": "quadratus-plantae",
+      "name": "Quadratus plantae",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Straightens the pull of the long toe flexor so the toes press down evenly in push-off."
+    },
+    {
+      "id": "lumbricals-foot",
+      "name": "Lumbricals (foot)",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Keep the toes flat and straight under load as you walk."
+    },
+    {
+      "id": "flexor-hallucis-brevis",
+      "name": "Flexor hallucis brevis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Presses the big toe down for push-off and balance."
+    },
+    {
+      "id": "adductor-hallucis",
+      "name": "Adductor hallucis",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Holds the forefoot together and supports its cross arch."
+    },
+    {
+      "id": "flexor-digiti-minimi-brevis-foot",
+      "name": "Flexor digiti minimi brevis (foot)",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Presses the little toe down in push-off."
+    },
+    {
+      "id": "opponens-digiti-minimi-foot",
+      "name": "Opponens digiti minimi (foot)",
+      "tier": "daily",
+      "activities": [
+        "walking"
+      ],
+      "note": "Where present, works with flexor digiti minimi brevis."
+    },
+    {
+      "id": "plantar-interossei",
+      "name": "Plantar interossei",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Hold the toes together and steady them under load."
+    },
+    {
+      "id": "dorsal-interossei-foot",
+      "name": "Dorsal interossei (foot)",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Spread and steady the toes as they grip the ground."
+    },
+    {
+      "id": "levator-claviculae",
+      "name": "Levator claviculae",
+      "tier": "daily",
+      "activities": [
+        "carrying",
+        "reaching"
+      ],
+      "note": "Where present, lifts the collarbone with the upper trapezius."
+    },
+    {
+      "id": "axillary-arch-muscle",
+      "name": "Axillary arch muscle",
+      "tier": "daily",
+      "activities": [
+        "pushing",
+        "rising"
+      ],
+      "note": "Where present, a slip of the latissimus dorsi that works with it; can press on the nerves in the armpit."
+    },
+    {
+      "id": "chondroepitrochlearis",
+      "name": "Chondroepitrochlearis",
+      "tier": "daily",
+      "activities": [
+        "pushing",
+        "reaching"
+      ],
+      "note": "Where present, a slip of the pectoralis major that works with it."
+    },
+    {
+      "id": "anconeus-epitrochlearis",
+      "name": "Anconeus epitrochlearis",
+      "tier": "daily",
+      "activities": [
+        "pushing"
+      ],
+      "note": "Where present, tightens as the elbow straightens; can press on the ulnar nerve."
+    },
+    {
+      "id": "gantzer-s-muscle",
+      "name": "Gantzer's muscle",
+      "tier": "daily",
+      "activities": [
+        "gripping",
+        "fine"
+      ],
+      "note": "Where present, an extra head of flexor pollicis longus that works with it."
+    },
+    {
+      "id": "extensor-digitorum-brevis-manus",
+      "name": "Extensor digitorum brevis manus",
+      "tier": "daily",
+      "activities": [
+        "fine"
+      ],
+      "note": "Where present, helps straighten the index or middle finger."
+    },
+    {
+      "id": "fibularis-quartus",
+      "name": "Fibularis quartus",
+      "tier": "daily",
+      "activities": [
+        "walking",
+        "upright"
+      ],
+      "note": "Where present, works with the fibularis muscles to brace the ankle."
+    },
+    {
+      "id": "accessory-soleus",
+      "name": "Accessory soleus",
+      "tier": "daily",
+      "activities": [
+        "upright",
+        "walking"
+      ],
+      "note": "Where present, works with the soleus in standing and walking."
+    },
+    {
+      "id": "ciliary-muscle",
+      "name": "Ciliary muscle",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Focuses the eye: contracts for as long as you look at anything close, like a screen, book or phone, and relaxes for distance."
+    },
+    {
+      "id": "sphincter-pupillae",
+      "name": "Sphincter pupillae",
+      "tier": "nonstop",
+      "activities": [
+        "looking",
+        "reflexes"
+      ],
+      "note": "Narrows the pupil in bright light and for near vision, adjusting all day."
+    },
+    {
+      "id": "dilator-pupillae",
+      "name": "Dilator pupillae",
+      "tier": "nonstop",
+      "activities": [
+        "looking",
+        "reflexes"
+      ],
+      "note": "Widens the pupil in dim light and with alertness or excitement."
+    },
+    {
+      "id": "superior-tarsal",
+      "name": "Superior tarsal",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Its steady tone lifts the upper lid an extra millimeter or two while you are awake; the lid droops when you are tired."
+    },
+    {
+      "id": "inferior-tarsal",
+      "name": "Inferior tarsal",
+      "tier": "nonstop",
+      "activities": [
+        "looking"
+      ],
+      "note": "Its steady tone holds the lower lid down slightly."
+    },
+    {
+      "id": "orbitalis",
+      "name": "Orbitalis",
+      "tier": "barely",
+      "activities": [],
+      "note": "Vestigial in humans; may push the eye slightly forward."
+    },
+    {
+      "id": "arrector-pili",
+      "name": "Arrector pili",
+      "tier": "occasional",
+      "activities": [
+        "reflexes"
+      ],
+      "note": "Raises the hairs into goose bumps in cold, fear or a thrill; one per hair follicle."
+    },
+    {
+      "id": "dartos",
+      "name": "Dartos",
+      "tier": "daily",
+      "activities": [
+        "reflexes"
+      ],
+      "note": "Wrinkles and tightens the scrotal skin in cold and relaxes it in warmth, adjusting testicular temperature through the day."
+    },
+    {
+      "id": "corrugator-cutis-ani",
+      "name": "Corrugator cutis ani",
+      "tier": "barely",
+      "activities": [],
+      "note": "Wrinkles the skin around the anus; no meaningful everyday job."
+    },
+    {
+      "id": "trachealis",
+      "name": "Trachealis",
+      "tier": "nonstop",
+      "activities": [
+        "breathing",
+        "forced"
+      ],
+      "note": "Keeps tone in the back wall of the windpipe and narrows it in a cough to speed the airflow."
+    },
+    {
+      "id": "bronchoesophageus",
+      "name": "Bronchoesophageus",
+      "tier": "barely",
+      "activities": [],
+      "note": "Anchoring band between the esophagus and the left bronchus; no clear active role."
+    },
+    {
+      "id": "pleuroesophageus",
+      "name": "Pleuroesophageus",
+      "tier": "barely",
+      "activities": [],
+      "note": "Anchoring band between the esophagus and the pleura; no clear active role."
+    },
+    {
+      "id": "pyloric-sphincter",
+      "name": "Pyloric sphincter",
+      "tier": "nonstop",
+      "activities": [
+        "digestion"
+      ],
+      "note": "Lets food out of the stomach a little at a time for hours after each meal, and closes against backflow from the gut."
+    },
+    {
+      "id": "suspensory-muscle-of-duodenum",
+      "name": "Suspensory muscle of duodenum",
+      "tier": "daily",
+      "activities": [
+        "digestion"
+      ],
+      "note": "Thought to widen the bend where the duodenum meets the jejunum, easing food along."
+    },
+    {
+      "id": "sphincter-of-hepatopancreatic-ampulla",
+      "name": "Sphincter of hepatopancreatic ampulla",
+      "tier": "nonstop",
+      "activities": [
+        "digestion"
+      ],
+      "note": "Holds back bile and pancreatic juice between meals and relaxes after you eat to release them."
+    },
+    {
+      "id": "sphincter-of-bile-duct",
+      "name": "Sphincter of bile duct",
+      "tier": "nonstop",
+      "activities": [
+        "digestion"
+      ],
+      "note": "Keeps the bile duct shut between meals so bile fills the gallbladder."
+    },
+    {
+      "id": "sphincter-of-pancreatic-duct",
+      "name": "Sphincter of pancreatic duct",
+      "tier": "nonstop",
+      "activities": [
+        "digestion"
+      ],
+      "note": "Keeps bile from backing up into the pancreatic duct."
+    },
+    {
+      "id": "internal-anal-sphincter",
+      "name": "Internal anal sphincter",
+      "tier": "nonstop",
+      "activities": [
+        "continence"
+      ],
+      "note": "Provides most of the resting clench that keeps the anus closed day and night; relaxes briefly as the rectum fills so its contents can be sensed."
+    },
+    {
+      "id": "rectococcygeus",
+      "name": "Rectococcygeus",
+      "tier": "daily",
+      "activities": [
+        "continence"
+      ],
+      "note": "Anchors the rectum to the tailbone; thought to steady it during a bowel movement."
+    },
+    {
+      "id": "rectourethralis",
+      "name": "Rectourethralis",
+      "tier": "barely",
+      "activities": [],
+      "note": "Male; a band tying the rectum to the urethra, important in surgery but with no clear active role."
+    },
+    {
+      "id": "detrusor",
+      "name": "Detrusor",
+      "tier": "daily",
+      "activities": [
+        "continence"
+      ],
+      "note": "Relaxes as the bladder fills, then squeezes it empty each time you urinate, typically four to eight times a day."
+    },
+    {
+      "id": "trigone-muscle",
+      "name": "Trigone muscle",
+      "tier": "daily",
+      "activities": [
+        "continence"
+      ],
+      "note": "Keeps the ureter openings closed against backflow, especially while you urinate."
+    },
+    {
+      "id": "internal-urethral-sphincter",
+      "name": "Internal urethral sphincter",
+      "tier": "nonstop",
+      "activities": [
+        "continence",
+        "sexual"
+      ],
+      "note": "Keeps the bladder neck closed around the clock; in males it also shuts during ejaculation."
+    },
+    {
+      "id": "pubovesicalis",
+      "name": "Pubovesicalis",
+      "tier": "daily",
+      "activities": [
+        "continence"
+      ],
+      "note": "Thought to help open the bladder neck when you urinate."
+    },
+    {
+      "id": "rectovesicalis",
+      "name": "Rectovesicalis",
+      "tier": "barely",
+      "activities": [],
+      "note": "A band of smooth muscle between the bladder and rectum; no clear active role."
+    },
+    {
+      "id": "myocardium",
+      "name": "Myocardium",
+      "tier": "nonstop",
+      "activities": [
+        "heartbeat"
+      ],
+      "note": "Contracts about 100,000 times a day without rest, and harder whenever you climb stairs or hurry."
+    },
+    {
+      "id": "pectinate-muscles",
+      "name": "Pectinate muscles",
+      "tier": "nonstop",
+      "activities": [
+        "heartbeat"
+      ],
+      "note": "Ridges of the atrial walls that contract with every beat."
+    },
+    {
+      "id": "papillary-muscles-of-right-ventricle",
+      "name": "Papillary muscles of right ventricle",
+      "tier": "nonstop",
+      "activities": [
+        "heartbeat"
+      ],
+      "note": "Tighten the cords of the tricuspid valve with every beat so the valve cannot flip back."
+    },
+    {
+      "id": "papillary-muscles-of-left-ventricle",
+      "name": "Papillary muscles of left ventricle",
+      "tier": "nonstop",
+      "activities": [
+        "heartbeat"
+      ],
+      "note": "Tighten the cords of the mitral valve with every beat."
+    },
+    {
+      "id": "trabeculae-carneae",
+      "name": "Trabeculae carneae",
+      "tier": "nonstop",
+      "activities": [
+        "heartbeat"
+      ],
+      "note": "Muscle ridges of the ventricle walls that contract with every beat; the moderator band carries the heartbeat signal across the right ventricle."
+    }
+  ]
+}

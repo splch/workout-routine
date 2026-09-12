@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 daily_workout.py - the shortest, simplest full-body calisthenics routine you
-can do every day, chosen from calisthenics.json and muscles.json.
+can do every day, chosen from calisthenics.json, muscles.json and
+daily_life.json.
 
 How it works
 ------------
@@ -15,6 +16,19 @@ How it works
    exercises in the database that work it as a primary muscle
    (--weighting freq).  Counting every unit as 1 lets anatomy's naming
    density decide: the foot has more named muscles than the chest.
+   The weight is then discounted by the share of the routine's job an
+   ordinary day already does for the unit (MUSCLE_LOAD; --daily-life
+   scales it, 0 ignores it): how hard and how often daily life loads each
+   muscle, judged from gait and daily-activity studies.  Breathing does
+   90% of the diaphragm's job, every step 85% of the soleus's, chairs and
+   stairs half of the quadriceps', doors and armrests 15% of the chest's.
+   A unit takes the mean of its members and its weight is multiplied by
+   1 - --daily-life x load.  A muscle the table leaves out falls back to
+   its everyday activities in daily_life.json: each activity has a load
+   (breathing 1; standing, walking and holding up the head 0.75; rising
+   and stairs 0.5; light work 0.25; reflexes 0.1), halved for each place
+   it sits below the top of the muscle's list, and the muscle takes the
+   largest, bounded by its tier.
 3. Candidates.  Exercises are filtered by level (beginner by default), type
    (dynamic, isometric), category (skill, balance, travel and cardio
    categories are out by default) and the equipment you have.  Identical
@@ -62,6 +76,7 @@ Examples
     python3 daily_workout.py --max-n 4             # at most four moves
     python3 daily_workout.py --time-budget 240     # rounds of 4 minutes
     python3 daily_workout.py --exercise-cost 0     # as many as add coverage
+    python3 daily_workout.py --daily-life 0        # ignore daily life
     python3 daily_workout.py --equipment none,bar --max-level intermediate --require pull-up
     python3 daily_workout.py --json plan.json
 """
@@ -173,6 +188,71 @@ EACH_SIDE_RE = re.compile(
     r"(one|single)[- ](leg|arm|hand|foot)|each side|switch sides|per side|other side|side-lying|side plank"
     r"|on one|one hand|one foot|lunge|split squat|step-up|pistol|shrimp|archer|typewriter|copenhagen"
     r"|clamshell|fire hydrant|hip airplane|both directions|each direction|four directions", re.I)
+
+# Share of the routine's job an ordinary day already does for each muscle, 0-1: how hard
+# (fraction of maximum) and how often daily life loads it, judged from gait and
+# daily-activity studies for a mostly seated adult with a few thousand steps a day.
+MUSCLE_LOAD = [
+    # Living itself: 20,000 breaths a day and continence around the clock.
+    (0.9, ["diaphragm"]),
+    (0.85, ["anterior-scalene", "middle-scalene", "posterior-scalene",
+            "pubococcygeus", "puborectalis", "iliococcygeus", "coccygeus",
+            # Every step: push-off loads the plantar flexors at about half their maximum,
+            # thousands of times a day, and the soleus holds you up whenever you stand.
+            "soleus"]),
+    (0.75, ["gastrocnemius"]),
+    # Every step, lighter: single-leg stance for the hip abductors, heel strike and swing for
+    # the shin, arch support for the foot, at a quarter to a third of maximum.
+    (0.65, ["gluteus-medius", "gluteus-minimus", "tibialis-anterior"]),
+    (0.6, ["tensor-fasciae-latae", "abductor-hallucis", "flexor-digitorum-brevis", "flexor-hallucis-brevis",
+           "lumbricals-foot", "quadratus-plantae", "abductor-digiti-minimi-foot", "dorsal-interossei-foot",
+           "extensor-digitorum-longus", "extensor-hallucis-longus", "fibularis-longus", "fibularis-brevis",
+           "flexor-digitorum-longus", "flexor-hallucis-longus", "tibialis-posterior"]),
+    # Chairs and stairs: a couple of hundred efforts a day at a third to a half of maximum
+    # (a sit-to-stand loads the knee about like a bodyweight squat), plus posture.
+    (0.5, ["vastus-lateralis", "vastus-intermedius", "vastus-medialis",
+           "semispinalis-capitis", "semispinalis-cervicis", "splenius-capitis", "splenius-cervicis",
+           "piriformis", "superior-gemellus", "obturator-internus", "inferior-gemellus",
+           "quadratus-femoris", "obturator-externus"]),
+    (0.45, ["gluteus-maximus", "iliocostalis-lumborum", "iliocostalis-thoracis", "longissimus-thoracis",
+            "spinalis-thoracis", "multifidus"]),
+    # Walking's helpers and the odd bend: swing, stance and hinges at a fifth to a third of maximum.
+    (0.4, ["rectus-femoris", "psoas-major", "iliacus", "quadratus-lumborum",
+           "flexor-digitorum-superficialis", "flexor-digitorum-profundus", "flexor-carpi-radialis",
+           "flexor-carpi-ulnaris", "flexor-pollicis-longus"]),
+    (0.35, ["biceps-femoris", "semitendinosus", "semimembranosus",
+            "adductor-longus", "adductor-brevis", "adductor-magnus", "pectineus", "gracilis",
+            "transversus-abdominis", "extensor-carpi-radialis-longus", "extensor-carpi-radialis-brevis",
+            "extensor-carpi-ulnaris", "extensor-digitorum", "lumbricals-hand", "dorsal-interossei-hand",
+            "palmar-interossei"]),
+    # Sitting up, coughing and laughing: a few dozen brief hard contractions a day.
+    (0.3, ["rectus-abdominis", "external-oblique", "internal-oblique", "sternocleidomastoid",
+           "trapezius", "levator-scapulae", "brachioradialis", "pronator-teres", "supinator",
+           "supraspinatus", "infraspinatus", "teres-minor", "subscapularis"]),
+    # Reaching and carrying: a hundred reaches and a few minutes of bags a day at a fifth of maximum.
+    (0.25, ["deltoid", "serratus-anterior", "biceps-brachii", "brachialis", "longus-colli", "longus-capitis"]),
+    (0.2, ["triceps-brachii", "anconeus", "pectoralis-minor"]),
+    # Doors and armrests: seconds a day at a tenth of maximum.
+    (0.15, ["pectoralis-major", "latissimus-dorsi", "teres-major", "rhomboid-major", "rhomboid-minor"]),
+]
+MUSCLE_LOAD = {m: v for v, ms in MUSCLE_LOAD for m in ms}
+
+# Fallback for a muscle not in MUSCLE_LOAD: how much of its capacity an ordinary day asks
+# of the muscles an everyday activity uses (the keys of meta.activities in daily_life.json),
+# 0-1.  After daily_life.md's "Used is not trained": the nonstop functions are worked by
+# living itself; sitting, standing, walking and holding up the head give steady work for
+# hours or thousands of steps; rising from a chair and stairs are the heaviest everyday
+# loads, a few dozen times a day; the rest is light or brief.
+ACTIVITY_LOAD = {
+    "heartbeat": 1.0, "breathing": 1.0, "looking": 1.0, "digestion": 1.0, "continence": 1.0,
+    "upright": 0.75, "walking": 0.75, "head": 0.75,
+    "rising": 0.5, "stairs": 0.5,
+    "eating": 0.25, "talking": 0.25, "expression": 0.25, "bending": 0.25, "carrying": 0.25,
+    "reaching": 0.25, "pushing": 0.25, "gripping": 0.25, "fine": 0.25, "forced": 0.25,
+    "reflexes": 0.1, "sexual": 0.1,
+}
+ACTIVITY_DECAY = 0.5   # an activity's load halves for each place it sits below the top of a muscle's list
+TIER_LOAD = {"nonstop": (1.0, 1.0), "daily": (0.0, 1.0), "occasional": (0.0, 0.1), "barely": (0.0, 0.0)}  # floor, cap
 
 
 # --------------------------------------------------------------------------- data
@@ -376,7 +456,8 @@ def build_units(exercises, muscles, profiles):
     return units
 
 
-def unit_weights(units, exercises, profiles, mode):
+def unit_weights(units, exercises, profiles, mode, loads=None, strength=0.0):
+    """Weights with mean 1; loads (0-1 per unit, from daily_loads) times strength come off first."""
     unit_of = {m: i for i, u in enumerate(units) for m in u["members"]}
     freq = [0] * len(units)
     for e in exercises:
@@ -392,8 +473,63 @@ def unit_weights(units, exercises, profiles, mode):
         w = [float(f) for f in freq]
     else:
         raise ValueError(mode)
+    if loads is not None and strength > 0:
+        w = [x * (1.0 - strength * l) for x, l in zip(w, loads)]
     mean = sum(w) / len(w)
+    if mean <= 0:
+        sys.exit("every unit weight is zero under these settings")
     return [x / mean for x in w], freq
+
+
+# ------------------------------------------------------------------ daily life
+
+
+def load_daily_life(data_dir: str):
+    """daily_life.json, checked against ACTIVITY_LOAD and MUSCLE_LOAD."""
+    try:
+        with open(os.path.join(data_dir, "daily_life.json"), encoding="utf-8") as f:
+            dl = json.load(f)
+    except OSError as exc:
+        sys.exit("--daily-life needs daily_life.json (%s); pass --daily-life 0 to ignore it" % exc)
+    unknown = sorted(set(dl["meta"]["activities"]) - set(ACTIVITY_LOAD))
+    if unknown:
+        sys.exit("daily_life.json has activities with no load in ACTIVITY_LOAD: %s" % ", ".join(unknown))
+    unknown = sorted(set(MUSCLE_LOAD) - {m["id"] for m in dl["muscles"]})
+    if unknown:
+        sys.exit("MUSCLE_LOAD names muscles that are not in daily_life.json: %s" % ", ".join(unknown))
+    return dl
+
+
+def muscle_load(entry):
+    """(load, activity): the share of the routine's job an ordinary day already does for a muscle,
+    0-1, and its main everyday activity.  MUSCLE_LOAD decides; a muscle it leaves out takes the
+    largest load among its activities (listed most important first, each place down the list
+    halving an activity's load), bounded by its tier."""
+    driver = entry["activities"][0] if entry["activities"] else entry["tier"]
+    if entry["id"] in MUSCLE_LOAD:
+        return MUSCLE_LOAD[entry["id"]], driver
+    floor, cap = TIER_LOAD[entry["tier"]]
+    best = 0.0
+    for k, act in enumerate(entry["activities"]):
+        best = max(best, ACTIVITY_LOAD[act] * ACTIVITY_DECAY ** k)
+    return min(cap, max(floor, best)), driver
+
+
+def daily_loads(units, daily):
+    """Per unit: the mean load of its member muscles, and the activity of the most-used member."""
+    by_id = {m["id"]: m for m in daily["muscles"]}
+    loads, drivers = [], []
+    for u in units:
+        seen = {}
+        for m in u["members"]:
+            base = m.split(":")[0]
+            if base not in seen:
+                if base not in by_id:
+                    sys.exit("%s is not in daily_life.json" % base)
+                seen[base] = muscle_load(by_id[base])
+        loads.append(sum(l for l, _ in seen.values()) / len(seen))
+        drivers.append(max(seen.values(), key=lambda t: t[0])[1])
+    return loads, drivers
 
 
 # ------------------------------------------------------------- popularity prior
@@ -824,6 +960,16 @@ def print_report(ctx):
     print("Data       : %d exercises; %d muscles, %d of them trained by some exercise, grouped into"
           % (len(exercises), ctx["n_muscles"], ctx["n_trained"]))
     print("             %d functional units (%s); unit weights: %s" % (len(units), a.units_desc, a.weighting_desc))
+    if ctx["loads"] is not None:
+        names = {k: v.split(":")[0] for k, v in ctx["daily"]["meta"]["activities"].items()}
+        print("Daily life : weight x (1 - %.2g x load), the load being the share of the routine's job an ordinary day"
+              " already does for the unit, by its main everyday activity (daily_life.json)" % a.daily_life)
+        classes = defaultdict(lambda: defaultdict(list))
+        for i, u in enumerate(units):
+            classes[round(1 - a.daily_life * ctx["loads"][i], 2)][ctx["drivers"][i]].append(u["name"])
+        for mult in sorted(classes):
+            print("             x%-4s %s" % ("%.2g" % mult, "; ".join(
+                "%s: %s" % (names.get(act, act), ", ".join(us)) for act, us in classes[mult].items())))
     print("Filters    : level <= %s | types: %s | equipment: %s"
           % (LEVELS[a.max_level_idx], ", ".join(a.types_list), ", ".join(a.equipment_list)))
     print("             excluded categories: %s" % ("; ".join(a.excluded_categories) or "none"))
@@ -956,11 +1102,13 @@ def write_json(path, ctx):
                 "alternatives": [x.id for x in c.alternatives]}
     out = {
         "settings": {k: getattr(a, k) for k in ["equipment_list", "max_level", "types_list", "excluded_categories", "exclude",
-                                                 "require", "weighting", "units", "secondary_weight", "pattern_bonus",
+                                                 "require", "weighting", "units", "daily_life", "secondary_weight", "pattern_bonus",
                                                  "popularity", "level_cost", "exercise_cost", "time_budget", "min_gain",
                                                  "repeat_patterns", "max_n"]},
         "units": [{"name": u["name"], "region": u["region"], "members": u["members"], "weight": round(sc.w[i], 4),
-                   "primary_exercises": ctx["freq"][i]} for i, u in enumerate(units)],
+                   "primary_exercises": ctx["freq"][i],
+                   "daily_load": None if ctx["loads"] is None else round(ctx["loads"][i], 3),
+                   "daily_activity": None if ctx["drivers"] is None else ctx["drivers"][i]} for i, u in enumerate(units)],
         "patterns": {p: round(ctx["shares"].get(p, 0.0), 3) for p in ctx["patterns"]},
         "rows": [{"n": r["n"], "coverage": round(r["cov"], 3), "seconds": r["seconds"], "score": round(r["value"], 3),
                   "exact": r["exact"], "exercises": [c.id for c in r["set"]]} for r in ctx["rows"]],
@@ -982,7 +1130,7 @@ def parse_args(argv=None):
         epilog="Equipment keys are the keys of meta.equipment in calisthenics.json (none, wall, bar, low-bar, rings, "
                "suspension, dip-bars, parallettes, box, pole, rope, sliders, ab-wheel, towel, door, ...).\n"
                "Categories excluded by default: " + "; ".join(DEFAULT_EXCLUDE_CATEGORIES))
-    p.add_argument("--dir", default=HERE, help="directory holding calisthenics.json and muscles.json")
+    p.add_argument("--dir", default=HERE, help="directory holding calisthenics.json, muscles.json and daily_life.json")
     p.add_argument("--equipment", default=DEFAULT_EQUIPMENT,
                    help="comma-separated equipment keys you have, or 'all' (default: %(default)s)")
     p.add_argument("--max-level", default="beginner", choices=LEVELS, help="hardest level allowed (default: %(default)s)")
@@ -995,6 +1143,9 @@ def parse_args(argv=None):
                    help="'json': muscle ids from calisthenics.json; 'parts': the markdown's part-aware lists (default: %(default)s)")
     p.add_argument("--weighting", default="freq", choices=["freq", "freq-linear", "unit", "muscle"],
                    help="unit weight: sqrt of primary-use count (freq, default), the count itself, 1 per unit, or 1 per muscle")
+    p.add_argument("--daily-life", type=float, default=1.0,
+                   help="scale on the share of its weight a unit loses for the work daily life already does: 1 takes "
+                        "the full share, 0 ignores daily life (default: %(default)s)")
     p.add_argument("--secondary-weight", type=float, default=0.5, help="credit for a unit worked only as a secondary muscle (default: %(default)s)")
     p.add_argument("--pattern-bonus", type=float, default=2.0,
                    help="units credited per movement pattern, times the share of programs using it (default: %(default)s)")
@@ -1014,6 +1165,7 @@ def parse_args(argv=None):
               (a.exercise_cost < 0 or a.level_cost < 0 or a.pattern_bonus < 0 or a.popularity < 0 or a.min_gain < 0,
                "costs, bonuses and --min-gain must not be negative"),
               (not 0 <= a.secondary_weight <= 1, "--secondary-weight must be between 0 and 1"),
+              (not 0 <= a.daily_life <= 1, "--daily-life must be between 0 and 1"),
               (a.time_budget is not None and a.time_budget <= 0, "--time-budget must be positive")]
     for bad, msg in checks:
         if bad:
@@ -1074,10 +1226,13 @@ def main(argv=None):
     # units, weights, priors
     profiles = markdown_profiles(os.path.join(a.dir, "calisthenics.md"), exercises) if a.units == "parts" else json_profiles(exercises)
     units = build_units(exercises, muscles, profiles)
-    weights, freq = unit_weights(units, exercises, profiles, a.weighting)
+    daily = load_daily_life(a.dir) if a.daily_life > 0 else None
+    loads, drivers = daily_loads(units, daily) if daily else (None, None)
+    weights, freq = unit_weights(units, exercises, profiles, a.weighting, loads, a.daily_life)
     a.units_desc = "muscles that always co-occur" + (", parts from calisthenics.md" if a.units == "parts" else "")
-    a.weighting_desc = {"freq": "sqrt of primary-use count", "freq-linear": "primary-use count",
-                        "unit": "1 per unit", "muscle": "1 per muscle"}[a.weighting]
+    a.weighting_desc = ({"freq": "sqrt of primary-use count", "freq-linear": "primary-use count",
+                         "unit": "1 per unit", "muscle": "1 per muscle"}[a.weighting]
+                        + ("" if loads is None else ", less daily life's work (--daily-life %.2g)" % a.daily_life))
     texts = mention_texts(cal)
     mentions = count_mentions(exercises, texts)
     shares, n_programs = pattern_shares(cal, exercises, mentions)
@@ -1158,7 +1313,7 @@ def main(argv=None):
            "required": required, "n_raw": n_raw, "n_classes": len(classes), "n_pool": len(pool),
            "n_muscles": len(muscles), "n_trained": sum(len(u["members"]) for u in units), "patterns": patterns,
            "shares": shares, "n_programs": n_programs, "n_texts": len(texts), "reach_P": reach_P, "reach_A": reach_A,
-           "next": nxt[:3], "freq": freq}
+           "next": nxt[:3], "freq": freq, "daily": daily, "loads": loads, "drivers": drivers}
     print_report(ctx)
     print("\nSearch: %d candidates, sizes %d-%d, %s nodes, %.1f s%s"
           % (len(pool), rows[0]["n"], rows[-1]["n"], "{:,}".format(sum(r["nodes"] for r in rows)), elapsed,
