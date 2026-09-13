@@ -11,7 +11,7 @@ How it works
    deep hip rotators, ...) are merged into one unit: the 99 muscles that any
    exercise trains become 51 units, named as in calisthenics.md.
    --units parts instead reads the markdown's Works/Also lists, which split
-   the deltoid, trapezius and pectoralis major into their parts (58 units).
+   the deltoid, trapezius and pectoralis major into their parts (56 units).
 2. Unit weights.  A unit is weighted by the square root of the number of
    exercises in the database that work it as a primary muscle
    (--weighting freq).  Counting every unit as 1 lets anatomy's naming
@@ -28,13 +28,17 @@ How it works
    (breathing 1; standing, walking and holding up the head 0.75; rising
    and stairs 0.5; light work 0.25; reflexes 0.1), halved for each place
    it sits below the top of the muscle's list, and the muscle takes the
-   largest, bounded by its tier.
+   largest, bounded by its tier.  The weights are then rescaled so the
+   average unit weighs 1: the "weighted unit" that every cost, --min-gain
+   and the report count in.
 3. Candidates.  Exercises are filtered by level (beginner by default), type
-   (dynamic, isometric), category (skill, balance, travel and cardio
-   categories are out by default) and the equipment you have.  Identical
-   muscle profiles are merged, keeping the best-known exercise; a profile is
-   dropped only when another exercise of the same movement pattern covers a
-   superset, is no harder, no slower and at least as well known.
+   (dynamic, isometric), category (handstands and arm balances, locomotion,
+   tumbling, mobility, cardio and jumps are out by default) and the
+   equipment you have.  Identical muscle profiles are merged, keeping the
+   best-known exercise (under --time-budget only equally long ones merge); a
+   profile is dropped only when another exercise of the same movement
+   pattern works the same muscles (any superset with --min-gain 0), is no
+   slower and scores at least as well on popularity, level and time.
 4. Score of a routine =
        weighted muscle coverage   (primary 1, secondary --secondary-weight)
      + pattern prior              (once per movement pattern present:
@@ -42,29 +46,35 @@ How it works
                                    programs that use that pattern)
      + popularity                 (per exercise: --popularity x ln(1 + number
                                    of the database's programs, named workouts,
-                                   format and modifier examples naming it)
+                                   format and modifier examples naming it; a
+                                   variant's name counts for the variant only)
      - level cost                 (--level-cost per level above beginner)
      - time cost                  (--exercise-cost per 40 s block: 30 s work
-                                   + 10 s transition, work doubled for
-                                   each-side moves, +15 s with equipment)
+                                   + 10 s transition, work doubled for moves
+                                   done one side at a time, +15 s to re-rig
+                                   rings or suspension straps)
    with at most one exercise per movement pattern (--repeat-patterns lifts
    this) and an optional --time-budget per round.  Every exercise must keep
    a unique muscle contribution of at least --min-gain, so nothing is ever
    added as filler.
 5. Search.  For each size an exact branch-and-bound finds the best routine
    of at most that many exercises; the routine stops growing when no
-   exercise pays for its time.  Exact ties go to the easier exercise, then
-   the one needing no equipment, then the better-known one, then the one
-   with more headroom (harder exercises) in its category.
-6. Output.  The routine is printed in circuit order (neighbours share no
-   primary muscle), with progression steps chained across the category,
-   same-muscle swaps, what one more move would add, and a daily protocol
-   quoted from the database's formats and programs.
+   exercise's coverage and priors pay for its time.  Exact ties go to the
+   easier exercise, then the one needing no equipment, then the
+   better-known one, then the one with more headroom (harder exercises) in
+   its category.
+6. Output.  The routine is printed in circuit order (neighbours, the last
+   and the first included, share as few primary muscles as possible), with
+   progression steps chained across the category, same-muscle swaps, what
+   one more move would add, and a daily protocol quoted from the database's
+   formats and programs.
 
 Movement patterns come from the database's categories, with Core split into
 anti-extension / flexion / rotation and Posterior chain into hinge /
-abduction by group.  The 30 s + 10 s timing is the 7-Minute Workout's; the
-doubling for each-side moves and the 15 s equipment set-up are heuristics.
+abduction by group.  The 30 s + 10 s timing is the 7-Minute Workout's, and
+so is setting out a chair or a wall once rather than every round.  Giving
+each side of a one-sided move its own 30 s (the 7-Minute Workout gives its
+side plank a single 30 s station) and the 15 s to re-rig straps are heuristics.
 
 Only the standard library is used.
 
@@ -72,10 +82,10 @@ Examples
 --------
     python3 daily_workout.py                       # household equipment
     python3 daily_workout.py --equipment none      # floor only
-    python3 daily_workout.py --equipment none,wall,box,door,low-bar,towel,bar
+    python3 daily_workout.py --equipment none,wall,box,door,low-bar,towel,sliders,stick,bar
     python3 daily_workout.py --max-n 4             # at most four moves
     python3 daily_workout.py --time-budget 240     # rounds of 4 minutes
-    python3 daily_workout.py --exercise-cost 0     # as many as add coverage
+    python3 daily_workout.py --exercise-cost 0     # as many as add coverage (about half a minute)
     python3 daily_workout.py --daily-life 0        # ignore daily life
     python3 daily_workout.py --equipment none,bar --max-level intermediate --require pull-up
     python3 daily_workout.py --json plan.json
@@ -97,9 +107,9 @@ from dataclasses import dataclass, field
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEVELS = ["beginner", "intermediate", "advanced", "elite"]
 ALL_TYPES = ["dynamic", "isometric", "plyometric", "conditioning", "locomotion", "mobility", "skill"]
-DEFAULT_EQUIPMENT = "none,wall,box,door,low-bar,towel"
+DEFAULT_EQUIPMENT = "none,wall,box,door,low-bar,towel,sliders,stick"
 DEFAULT_TYPES = "dynamic,isometric"
-# Skill, balance, travel and cardio categories are not daily strength work.
+# Handstands and arm balances, locomotion, tumbling, mobility, cardio and jumps are not daily strength work.
 DEFAULT_EXCLUDE_CATEGORIES = [
     "Handstands, inversions & arm balances",
     "Locomotion & animal movement",
@@ -109,9 +119,14 @@ DEFAULT_EXCLUDE_CATEGORIES = [
     "Plyometrics & jumps",
 ]
 EPS = 1e-9
-BLOCK = 40.0          # seconds per exercise block: 30 s work + 10 s transition (7-Minute Workout)
 WORK, TRANSITION, SETUP = 30.0, 10.0, 15.0
+BLOCK = WORK + TRANSITION   # seconds per exercise block: 30 s work + 10 s transition (7-Minute Workout)
+# Equipment whose straps are re-rigged for each exercise and so costs SETUP seconds a block.
+# Everything else is set out once before the first round, as the 7-Minute Workout's chair and
+# wall are, and is reached within the transition.
+RIGGED = {"rings", "suspension"}
 SEARCH_SECONDS = 30.0   # per routine size; the search reports "heuristic" if it runs out
+CIRCUIT_MAX = 9         # longer routines keep database order: 9! orders already take about half a second
 
 # Names for multi-muscle units, in the vocabulary of calisthenics.md.
 UNIT_NAMES = {
@@ -173,50 +188,67 @@ CATEGORY_PATTERN = {
     "Pilates mat (classical order)": "core: flexion",
 }
 PULL_PATTERNS = {"horizontal pull", "vertical pull"}
-# Generic words the programs use for whole patterns (from the database's group names).
+# Generic words the programs use for whole patterns (from the database's group names).  A word inside a
+# longer exercise name or word ("row" in "prone row", "plank" in "side plank") does not count.
 PATTERN_KEYWORDS = {
     "horizontal push": ["push-up"], "horizontal pull": ["row"], "vertical pull": ["pull-up", "chin-up"],
     "vertical push": ["handstand push-up", "pike push-up"], "dip / support": ["dip"],
     "squat / knee": ["squat", "lunge", "step-up"], "hip hinge": ["hinge", "bridge", "back extension", "hip thrust"],
-    "core: flexion": ["sit-up", "crunch", "leg raise", "l-sit"], "core: anti-extension": ["plank", "hollow"],
-    "core: rotation / lateral": ["side plank", "side bridge", "twist"], "neck": ["neck"],
-    "calves / feet / balance": ["calf raise"], "grip / forearm": ["grip", "hang"],
+    "core: flexion": ["sit-up", "crunch", "leg raise", "l-sit"], "core: anti-extension": ["plank", "hollow", "anti-extension"],
+    "core: rotation / lateral": ["side plank", "side bridge", "twist", "anti-rotation"], "neck": ["neck"],
+    "calves / feet / balance": ["calf raise", "calves"], "grip / forearm": ["grip", "hang"],
 }
+# Phrases that hold a generic word without its pattern: "100 push-ups in a row", "three grips" (hand positions).
+NOT_PATTERN_RE = re.compile(r"\bin a row\b|\bgrips\b", re.I)
 
-# Moves done one side (or one direction) at a time take twice the work time.
+# Moves that load one side's prime movers at a time take twice the work time, so each side
+# gets its own 30 s: one-sided moves (single-leg, one-arm, side-lying, side planks, flags,
+# uneven and archer loading) and moves whose working leg alternates (lunges, step-ups).
 EACH_SIDE_RE = re.compile(
-    r"(one|single)[- ](leg|arm|hand|foot)|each side|switch sides|per side|other side|side-lying|side plank"
-    r"|on one|one hand|one foot|lunge|split squat|step-up|pistol|shrimp|archer|typewriter|copenhagen"
-    r"|clamshell|fire hydrant|hip airplane|both directions|each direction|four directions", re.I)
+    r"\b(?:(?:one|single)[- ](?:leg|arm|hand|foot)|each side|switch sides|per side|other side|side-lying"
+    r"|side plank|on one|lunge|split squat|step-up|step-down|pistol|shrimp|archer|copenhagen|clamshell"
+    r"|fire hydrant|hip airplane|donkey kick|side crunch|cossack|seated knee lift|shoulder bridge"
+    r"|human flag|clutch flag|vertical flag|couch stretch|pigeon|leg swing|(?:shoulder|hip) cars|knee-to-wall)",
+    re.I)
+# ...except where every rep still works both sides' prime movers: an offset grip, a free leg
+# lifted while the arms or trunk work, or a move that crosses to both sides each rep.
+BOTH_SIDES_RE = re.compile(
+    r"\b(?:switch sides each set|typewriter|around-the-world pull-up|single-leg (?:push-up|plank|stretch)"
+    r"|one-leg (?:planche|front lever|l-sit)|plank up-down|shoulder tap|plank hip twist|t push-up|towel wring"
+    r"|control balance|kick-up)", re.I)
 
 # Share of the routine's job an ordinary day already does for each muscle, 0-1: how hard
 # (fraction of maximum) and how often daily life loads it, judged from gait and
 # daily-activity studies for a mostly seated adult with a few thousand steps a day.
 MUSCLE_LOAD = [
-    # Living itself: 20,000 breaths a day and continence around the clock.
+    # Living itself: 20,000 breaths a day, each at a tenth to a fifth of the diaphragm's maximum
+    # force, and continence around the clock.
     (0.9, ["diaphragm"]),
-    (0.85, ["anterior-scalene", "middle-scalene", "posterior-scalene",
-            "pubococcygeus", "puborectalis", "iliococcygeus", "coccygeus",
-            # Every step: push-off loads the plantar flexors at about half their maximum,
+    (0.85, ["pubococcygeus", "puborectalis", "iliococcygeus", "coccygeus",
+            # Every step: push-off loads the plantar flexors at about 40% of their maximum,
             # thousands of times a day, and the soleus holds you up whenever you stand.
             "soleus"]),
     (0.75, ["gastrocnemius"]),
     # Every step, lighter: single-leg stance for the hip abductors, heel strike and swing for
-    # the shin, arch support for the foot, at a quarter to a third of maximum.
-    (0.65, ["gluteus-medius", "gluteus-minimus", "tibialis-anterior"]),
+    # the shin, arch support for the foot, at a tenth to a quarter of maximum.
+    (0.65, ["gluteus-medius", "gluteus-minimus"]),
     (0.6, ["tensor-fasciae-latae", "abductor-hallucis", "flexor-digitorum-brevis", "flexor-hallucis-brevis",
            "lumbricals-foot", "quadratus-plantae", "abductor-digiti-minimi-foot", "dorsal-interossei-foot",
-           "extensor-digitorum-longus", "extensor-hallucis-longus", "fibularis-longus", "fibularis-brevis",
-           "flexor-digitorum-longus", "flexor-hallucis-longus", "tibialis-posterior"]),
-    # Chairs and stairs: a couple of hundred efforts a day at a third to a half of maximum
-    # (a sit-to-stand loads the knee about like a bodyweight squat), plus posture.
+           "tibialis-anterior", "extensor-digitorum-longus", "extensor-hallucis-longus", "fibularis-longus",
+           "fibularis-brevis", "flexor-digitorum-longus", "flexor-hallucis-longus", "tibialis-posterior"]),
+    # Chairs and stairs: about a hundred efforts a day (some 60 sit-to-stands and a few flights)
+    # at a third to a half of maximum (a sit-to-stand loads the knee about like a bodyweight
+    # squat).  Posture: the neck muscles hold up the head all day, the scalenes also lift the
+    # ribs, lightly, with every breath, and the deep hip rotators steady every step.
     (0.5, ["vastus-lateralis", "vastus-intermedius", "vastus-medialis",
            "semispinalis-capitis", "semispinalis-cervicis", "splenius-capitis", "splenius-cervicis",
+           "anterior-scalene", "middle-scalene", "posterior-scalene",
            "piriformis", "superior-gemellus", "obturator-internus", "inferior-gemellus",
            "quadratus-femoris", "obturator-externus"]),
     (0.45, ["gluteus-maximus", "iliocostalis-lumborum", "iliocostalis-thoracis", "longissimus-thoracis",
             "spinalis-thoracis", "multifidus"]),
-    # Walking's helpers and the odd bend: swing, stance and hinges at a fifth to a third of maximum.
+    # Walking's helpers and the odd bend: swing and stance at 5 to 15% of maximum, bends and lifts
+    # at more; grip for the forearm and hand.
     (0.4, ["rectus-femoris", "psoas-major", "iliacus", "quadratus-lumborum",
            "flexor-digitorum-superficialis", "flexor-digitorum-profundus", "flexor-carpi-radialis",
            "flexor-carpi-ulnaris", "flexor-pollicis-longus"]),
@@ -225,11 +257,13 @@ MUSCLE_LOAD = [
             "transversus-abdominis", "extensor-carpi-radialis-longus", "extensor-carpi-radialis-brevis",
             "extensor-carpi-ulnaris", "extensor-digitorum", "lumbricals-hand", "dorsal-interossei-hand",
             "palmar-interossei"]),
-    # Sitting up, coughing and laughing: a few dozen brief hard contractions a day.
+    # Sitting up, coughing and laughing: a few dozen brief hard contractions a day for the
+    # abdominals; light carrying, reaching and head turning for the neck, shoulder and forearm.
     (0.3, ["rectus-abdominis", "external-oblique", "internal-oblique", "sternocleidomastoid",
            "trapezius", "levator-scapulae", "brachioradialis", "pronator-teres", "supinator",
            "supraspinatus", "infraspinatus", "teres-minor", "subscapularis"]),
     # Reaching and carrying: a hundred reaches and a few minutes of bags a day at a fifth of maximum.
+    # The deep neck flexors only steady the head, which the extensors hold up.
     (0.25, ["deltoid", "serratus-anterior", "biceps-brachii", "brachialis", "longus-colli", "longus-capitis"]),
     (0.2, ["triceps-brachii", "anconeus", "pectoralis-minor"]),
     # Doors and armrests: seconds a day at a tenth of maximum.
@@ -242,7 +276,7 @@ MUSCLE_LOAD = {m: v for v, ms in MUSCLE_LOAD for m in ms}
 # 0-1.  After daily_life.md's "Used is not trained": the nonstop functions are worked by
 # living itself; sitting, standing, walking and holding up the head give steady work for
 # hours or thousands of steps; rising from a chair and stairs are the heaviest everyday
-# loads, a few dozen times a day; the rest is light or brief.
+# loads, some 60 sit-to-stands and a few flights a day; the rest is light or brief.
 ACTIVITY_LOAD = {
     "heartbeat": 1.0, "breathing": 1.0, "looking": 1.0, "digestion": 1.0, "continence": 1.0,
     "upright": 0.75, "walking": 0.75, "head": 0.75,
@@ -282,9 +316,9 @@ def pattern_of(e: dict) -> str:
 def est_seconds(e: dict) -> float:
     """One block of the exercise inside a circuit."""
     text = " ".join([e["name"], e.get("note", "")] + e.get("aka", []))
-    sides = 2 if EACH_SIDE_RE.search(text) else 1
-    setup = 0.0 if "none" in e["equipment"] else SETUP
-    return WORK * sides + TRANSITION + setup
+    sides = 2 if EACH_SIDE_RE.search(text) and not BOTH_SIDES_RE.search(text) else 1
+    rigged = all(any(p in RIGGED for p in alt.split("+")) for alt in e["equipment"])
+    return WORK * sides + TRANSITION + (SETUP if rigged else 0.0)
 
 
 def headroom(e: dict, exercises: list[dict]) -> int:
@@ -390,7 +424,7 @@ def markdown_profiles(md_path: str, exercises: list[dict]):
             works = also = None
             w = re.search(r"Works: (.+?)\.(?: Also: (.+?)\.)?$", rest)
             if w:
-                works, also = split_names(w.group(1)), split_names(w.group(2)) if w.group(2) else []
+                works, also = split_names(w.group(1)), split_names(w.group(2)) if w.group(2) else None
             else:
                 a = re.search(r"(?:^|\. )Also: (.+?)\.$", rest)
                 if a:
@@ -548,28 +582,46 @@ def mention_texts(cal):
     return t
 
 
+def names_rx(names, plural=r"s?"):
+    """Any of the names, case-insensitive, hyphen- and space-tolerant, plural allowed except after a
+    proper name such as The Hundred ("in the hundreds" is not the Pilates move)."""
+    alts = [re.escape(n).replace(r"\-", "[- ]?").replace(r"\ ", "[- ]?") + ("" if n.startswith("The ") else plural)
+            for n in sorted(names, key=len, reverse=True)]     # longest first: "Superman lift" before "Superman"
+    return re.compile(r"(?<![\w-])(?:" + "|".join(alts) + r")(?![\w-])", re.I)
+
+
+def longest_matches(rxs, text):
+    """(start, end, key) of each match of each regex, less those inside a longer match."""
+    found = [(m.start(), m.end(), k) for k, rx in rxs.items() for m in rx.finditer(text)]
+    return [f for f in found if not any(a <= f[0] and f[1] <= b and b - a > f[1] - f[0] for a, b, _ in found)]
+
+
 def count_mentions(exercises, texts):
-    """id -> [(kind, name of the program/workout/format/modifier)] naming the exercise or an aka."""
-    out = {}
-    for e in exercises:
-        alts = [re.escape(n).replace(r"\-", "[- ]?").replace(r"\ ", "[- ]?") for n in [e["name"]] + e.get("aka", [])]
-        rx = re.compile(r"(?<![\w-])(?:" + "|".join(alts) + r")s?(?![\w-])", re.I)
-        out[e["id"]] = [(kind, name) for kind, name, txt in texts if rx.search(txt)]
+    """id -> [(kind, name of the program/workout/format/modifier)] naming the exercise or an aka.  A name
+    inside a longer one counts only for the longer: "Hindu push-ups" names the Hindu push-up, not the push-up."""
+    rxs = {e["id"]: names_rx([e["name"]] + e.get("aka", [])) for e in exercises}
+    out = {i: [] for i in rxs}
+    for kind, name, txt in texts:
+        for i in {k for _, _, k in longest_matches(rxs, txt)}:
+            out[i].append((kind, name))
     return out
 
 
 def pattern_shares(cal, exercises, mentions):
-    """Share of the database's programs that name an exercise, or a generic word, of each pattern."""
+    """Share of the database's programs that name an exercise, or a generic word, of each pattern.
+    Generic words count in the program's name as well ("Fighter Pullup Program"), but not inside a
+    longer exercise name or word, nor in the phrases of NOT_PATTERN_RE."""
     hit = defaultdict(set)
     for e in exercises:
         for kind, name in mentions[e["id"]]:
             if kind == "program":
                 hit[pattern_of(e)].add(name)
-    for p, words in PATTERN_KEYWORDS.items():
-        rx = re.compile(r"(?<![\w-])(?:" + "|".join(re.escape(w).replace(r"\-", "[- ]?").replace(r"\ ", "[- ]?")
-                                                  for w in words) + r")(?:s|es)?(?![\w-])", re.I)
-        for prog in cal["programs"]:
-            if rx.search(prog["summary"]):
+    rxs = {("word", p): names_rx(words, r"(?:s|es)?") for p, words in PATTERN_KEYWORDS.items()}
+    rxs.update({("exercise", e["id"]): names_rx([e["name"]] + e.get("aka", [])) for e in exercises})
+    for prog in cal["programs"]:
+        text = NOT_PATTERN_RE.sub(" ", prog["name"] + ". " + prog["summary"])
+        for _, _, (kind, p) in longest_matches(rxs, text):
+            if kind == "word":
                 hit[p].add(prog["name"])
     n = len(cal["programs"])
     return {p: len(s) / n for p, s in hit.items()}, n
@@ -641,10 +693,13 @@ def build_candidates(exercises, units, patterns, mentions, profiles, cfg, *, max
            and e["id"] not in exclude_ids and equipment_ok(e, available)]
     cands = [make_cand(e, units_of, patterns, exercises, mentions, profiles, cfg) for e in raw]
 
-    # merge identical profiles; the representative has the best modular score, then tie-break
+    # merge identical profiles; the representative has the best modular score, then tie-break.
+    # Under --time-budget only equally long ones merge: a faster member may fit a budget its
+    # representative doesn't
+    budget = cfg["time_budget"] is not None
     groups = defaultdict(list)
     for c in cands:
-        groups[(c.P, c.A, c.level, c.pattern)].append(c)
+        groups[(c.P, c.A, c.level, c.pattern, c.seconds if budget else 0.0)].append(c)
     classes = []
     for members in groups.values():
         members.sort(key=lambda c: (-c.mod, -c.tie))
@@ -653,10 +708,13 @@ def build_candidates(exercises, units, patterns, mentions, profiles, cfg, *, max
         classes.append(rep)
 
     # drop a profile only if a candidate of the same pattern covers a superset and is at
-    # least as good on every other term
+    # least as good on every other term.  Under --min-gain the superset must be the same
+    # units: extra coverage can take another exercise's unique gain below the minimum
+    same_units = cfg["min_gain"] > 0
     kept = []
     for c in classes:
-        dominated = any(d is not c and d.pattern == c.pattern and d.P & c.P == c.P and d.A & c.A == c.A
+        dominated = any(d is not c and d.pattern == c.pattern
+                        and ((d.P, d.A) == (c.P, c.A) if same_units else (d.P & c.P == c.P and d.A & c.A == c.A))
                         and d.seconds <= c.seconds and d.mod >= c.mod - EPS
                         and (d.mod > c.mod + EPS or d.tie >= c.tie) for d in classes)
         if not dominated:
@@ -883,17 +941,19 @@ def solve_size(cands, sc, n, base, warm=None):
     return branch_and_bound(cands, sc, n, base, inc)
 
 
+def neighbour_shared(order):
+    """Primary units shared by consecutive exercises, the last and the first included: rounds repeat."""
+    pairs = zip(order, order[1:] + order[:1]) if len(order) > 2 else zip(order, order[1:])
+    return sum((x.P & y.P).bit_count() for x, y in pairs)
+
+
 def circuit_order(chosen, db_order):
-    """Order so that neighbours share as few primary units as possible; database order breaks ties."""
-    if len(chosen) > 9:
-        return sorted(chosen, key=lambda c: db_order[c.id])
-    best = None
-    for perm in itertools.permutations(chosen):
-        shared = sum((perm[i].P & perm[i + 1].P).bit_count() for i in range(len(perm) - 1))
-        key = (shared, [db_order[c.id] for c in perm])
-        if best is None or key < best[0]:
-            best = (key, perm)
-    return list(best[1]) if best else []
+    """Order so that neighbours share as few primary units as possible; database order breaks ties
+    (permutations of a sorted list come in lexicographic order, and min() keeps the first minimum)."""
+    in_db_order = sorted(chosen, key=lambda c: db_order[c.id])
+    if len(chosen) > CIRCUIT_MAX:
+        return in_db_order
+    return list(min(itertools.permutations(in_db_order), key=neighbour_shared))
 
 
 # ---------------------------------------------------------------------- report
@@ -981,8 +1041,8 @@ def print_report(ctx):
           % (ctx["n_raw"], ctx["n_classes"], ctx["n_pool"]))
     print("Score      : coverage (primary 1, secondary %.2g) + pattern prior (x%.2g) + popularity (x%.2g)"
           % (a.secondary_weight, a.pattern_bonus, a.popularity))
-    print("             - %.2g per level above beginner - %.2g per 40 s block%s; min unique gain %.2g;"
-          " %s" % (a.level_cost, a.exercise_cost,
+    print("             - %.2g per level above beginner - %.2g per %s block%s; min unique gain %.2g;"
+          " %s" % (a.level_cost, a.exercise_cost, fmt_seconds(BLOCK),
                    "" if a.time_budget is None else "; round budget %s" % fmt_seconds(a.time_budget),
                    a.min_gain, "one exercise per pattern" if not a.repeat_patterns else "patterns may repeat"))
     shares = ctx["shares"]
@@ -1008,8 +1068,11 @@ def print_report(ctx):
         print("No exercise pays for its time under these costs; lower --exercise-cost or --min-gain.")
         return
     print("=" * 78)
-    print("THE ROUTINE  (%d exercises, one round about %s; order alternates muscles)"
-          % (len(chosen), fmt_seconds(sum(c.seconds for c in chosen))))
+    shared = neighbour_shared(chosen)
+    print("THE ROUTINE  (%d exercise%s, one round about %s%s)"
+          % (len(chosen), "" if len(chosen) == 1 else "s", fmt_seconds(sum(c.seconds for c in chosen)),
+             "" if len(chosen) < 2 else "; database order" if len(chosen) > CIRCUIT_MAX else
+             "; order alternates muscles" if shared == 0 else "; neighbours share as few muscles as they can"))
     print("=" * 78)
     total = sc.value(chosen, base)
     for i, c in enumerate(chosen, 1):
@@ -1038,13 +1101,15 @@ def print_report(ctx):
         print()
 
     prim, anym, pmask, _ = sc.state(chosen, base)
-    full = [u["name"] for i, u in enumerate(units) if prim >> i & 1]
-    part = [u["name"] for i, u in enumerate(units) if (anym >> i & 1) and not (prim >> i & 1)]
-    miss = [u["name"] for i, u in enumerate(units) if not (anym >> i & 1) and (ctx["reach_A"] >> i & 1) and sc.w[i] > 0]
-    unreach = [u["name"] for i, u in enumerate(units) if not (ctx["reach_A"] >> i & 1) and sc.w[i] > 0]
+    weighted = [i for i in range(len(units)) if sc.w[i] > 0]    # a unit no exercise works as primary weighs 0
+    full = [units[i]["name"] for i in weighted if prim >> i & 1]
+    part = [units[i]["name"] for i in weighted if (anym >> i & 1) and not (prim >> i & 1)]
+    miss = [units[i]["name"] for i in weighted if not (anym >> i & 1) and (ctx["reach_A"] >> i & 1)]
+    unreach = [units[i]["name"] for i in weighted if not (ctx["reach_A"] >> i & 1)]
     cov = sc.coverage(prim, anym)
     print("COVERAGE: %.1f of %.1f weighted units (%.0f%%) - %d units worked as primary, %d only as secondary,"
-          " %d untouched" % (cov, w_total, 100 * cov / w_total, len(full), len(part), len(miss) + len(unreach)))
+          " %d untouched%s" % (cov, w_total, 100 * cov / w_total, len(full), len(part), len(miss) + len(unreach),
+                               "" if len(weighted) == len(units) else ", %d with no weight" % (len(units) - len(weighted))))
     region = defaultdict(lambda: [0.0, 0.0])
     for i, u in enumerate(units):
         region[u["region"]][1] += sc.w[i]
@@ -1057,7 +1122,7 @@ def print_report(ctx):
         print("  Not covered    : %s" % ", ".join(miss))
     if unreach:
         print("  Unreachable under these filters: %s" % ", ".join(unreach))
-    if not (pmask & sum(1 << i for i, p in enumerate(ctx["patterns"]) if p in PULL_PATTERNS)):
+    if not any(ctx["patterns"][c.pattern] in PULL_PATTERNS for c in ctx["pool"] + ctx["required"]):
         print("  Note: no pulling exercise fits these filters. A door frame gives the door-frame row and a sturdy"
               " table the table row (--equipment door or low-bar).")
     print()
@@ -1076,8 +1141,9 @@ def print_report(ctx):
     print("HOW TO RUN IT EVERY DAY (quoted from the database's formats and programs)")
     print("  Round    : %.0f s of work, then %.0f s to move to the next exercise - the 7-Minute Workout's timing"
           " (%s)." % (WORK, TRANSITION, prog["7-Minute Workout"]["origin"]))
-    print("             Each-side moves do both sides. One round of these %d moves takes about %s."
-          % (len(chosen), fmt_seconds(sum(c.seconds for c in chosen))))
+    print("             Each-side moves do both sides. One round of %s takes about %s."
+          % ("this move" if len(chosen) == 1 else "these %d moves" % len(chosen),
+             fmt_seconds(sum(c.seconds for c in chosen))))
     print("  Rounds   : Minimalist Routine (%s): \"%s\"" % (prog["Minimalist Routine"]["origin"],
           sentence(prog["Minimalist Routine"]["summary"], r"\d+[–-]\d+ rounds.*?failure")))
     print("  Effort   : Autoregulation: %s" % fmt["Autoregulation"]["description"])
@@ -1088,8 +1154,14 @@ def print_report(ctx):
     print("  Busy days: Grease the Groove: %s" % fmt["Grease the Groove"]["description"])
     print("  Variety  : swap among the same-muscle alternatives above, or take one movement a day"
           " (Convict Conditioning's Veterano).")
-    print("  Order    : neighbours share no primary muscle, after the Superset format (%s)."
-          % fmt["Superset"]["description"].rstrip(".").lower())
+    if len(chosen) > CIRCUIT_MAX:
+        print("  Order    : database order; the order of more than %d moves is not optimised." % CIRCUIT_MAX)
+    elif len(chosen) > 1:
+        print("  Order    : %s, after the Superset format (%s)."
+              % ("neighbours%s share no primary muscle" % (", the last and the first included," if len(chosen) > 2 else "")
+                 if shared == 0 else
+                 "neighbours share %d primary muscle unit%s, the fewest any order allows" % (shared, "" if shared == 1 else "s"),
+                 fmt["Superset"]["description"].rstrip(".").lower()))
 
 
 def write_json(path, ctx):
@@ -1152,16 +1224,19 @@ def parse_args(argv=None):
     p.add_argument("--popularity", type=float, default=0.5,
                    help="units credited per exercise, times ln(1 + mentions in the database) (default: %(default)s)")
     p.add_argument("--level-cost", type=float, default=1.0, help="units charged per difficulty level above beginner (default: %(default)s)")
-    p.add_argument("--exercise-cost", type=float, default=2.0, help="units charged per 40 s block of round time (default: %(default)s)")
+    p.add_argument("--exercise-cost", type=float, default=2.0, help="units charged per %d s block of round time (default: %%(default)s)" % BLOCK)
     p.add_argument("--time-budget", type=float, help="hard cap on seconds per round")
     p.add_argument("--min-gain", type=float, default=0.5,
                    help="weighted units of muscle coverage every exercise must contribute on its own (default: %(default)s)")
     p.add_argument("--repeat-patterns", action="store_true", help="allow more than one exercise per movement pattern")
-    p.add_argument("--max-n", type=int, default=8, help="most exercises in the routine (default: %(default)s)")
+    p.add_argument("--max-n", type=int, default=16, help="most exercises in the routine (default: %(default)s)")
     p.add_argument("--json", metavar="PATH", help="also write the result as JSON")
     a = p.parse_args(argv)
     a.max_level_idx = LEVELS.index(a.max_level)
-    checks = [(a.max_n < 1, "--max-n must be at least 1"),
+    nums = [a.daily_life, a.secondary_weight, a.pattern_bonus, a.popularity, a.level_cost, a.exercise_cost,
+            a.min_gain, 0.0 if a.time_budget is None else a.time_budget]
+    checks = [(not all(math.isfinite(x) for x in nums), "numeric options must be finite numbers"),
+              (a.max_n < 1, "--max-n must be at least 1"),
               (a.exercise_cost < 0 or a.level_cost < 0 or a.pattern_bonus < 0 or a.popularity < 0 or a.min_gain < 0,
                "costs, bonuses and --min-gain must not be negative"),
               (not 0 <= a.secondary_weight <= 1, "--secondary-weight must be between 0 and 1"),
@@ -1207,6 +1282,7 @@ def main(argv=None):
     bad = [x for x in a.types_list if x not in ALL_TYPES]
     if bad:
         sys.exit("unknown type: %s (valid: %s)" % (", ".join(bad), ", ".join(ALL_TYPES)))
+    a.exclude, a.require = list(dict.fromkeys(a.exclude)), list(dict.fromkeys(a.require))
     bad = [x for x in a.exclude + a.require if x not in ids]
     if bad:
         sys.exit("unknown exercise id: %s" % ", ".join(bad))
@@ -1218,9 +1294,13 @@ def main(argv=None):
     if "all" in a.include_category:
         excl -= set(DEFAULT_EXCLUDE_CATEGORIES)
     excl -= set(a.include_category)
-    bad = [x for x in excl | set(a.include_category) if x not in all_cats and x != "all"]
+    bad = sorted({x for x in DEFAULT_EXCLUDE_CATEGORIES + a.exclude_category if x not in all_cats}
+                 | {x for x in a.include_category if x not in all_cats + ["all"]})
     if bad:
         sys.exit("unknown category: %s\nvalid: %s" % ("; ".join(bad), "; ".join(all_cats)))
+    both = set(a.exclude_category) & set(a.include_category)
+    if both:
+        sys.exit("both included and excluded: %s" % "; ".join(sorted(both)))
     a.excluded_categories = [c for c in all_cats if c in excl]
 
     # units, weights, priors
@@ -1268,6 +1348,9 @@ def main(argv=None):
     empty = (0, 0, 0, 0.0)
     if a.time_budget is not None and sum(c.seconds for c in required) > a.time_budget:
         sys.exit("the required exercises alone exceed the time budget")
+    if a.time_budget is not None and not required and min(c.seconds for c in pool) > a.time_budget + EPS:
+        sys.exit("--time-budget %s is shorter than the quickest exercise (%s)"
+                 % (fmt_seconds(a.time_budget), fmt_seconds(min(c.seconds for c in pool))))
     base = sc.state(required, empty)
     req_keys = {(c.P, c.A, c.level, c.pattern) for c in required}
     pool = [c for c in pool if (c.P, c.A, c.level, c.pattern) not in req_keys]
@@ -1298,15 +1381,16 @@ def main(argv=None):
     elapsed = time.time() - t0
     chosen = circuit_order(rows[-1]["set"], db_order)
 
-    # the best candidates not in the routine, by muscle coverage gain
+    # the best candidates the routine could still take (can_add: pattern, round budget, unique
+    # gains), by muscle coverage gain
     prim, anym, pmask, _ = sc.state(chosen, empty)
+    node = sc.node([c for c in chosen if c not in required], base)
     nxt = []
     for c in pool:
-        if c in chosen or (sc.one_per_pattern and pmask >> c.pattern & 1):
+        if c in chosen or not sc.can_add(c, node):
             continue
         mg = sc.muscle_gain(c, prim, anym)
-        if mg >= a.min_gain:
-            nxt.append((c, mg, sc.gain(c, prim, anym, pmask)))
+        nxt.append((c, mg, sc.gain(c, prim, anym, pmask)))
     nxt.sort(key=lambda t: -t[1])
 
     ctx = {"args": a, "cal": cal, "units": units, "sc": sc, "rows": rows, "chosen": chosen, "base": empty, "pool": pool,
@@ -1315,9 +1399,10 @@ def main(argv=None):
            "shares": shares, "n_programs": n_programs, "n_texts": len(texts), "reach_P": reach_P, "reach_A": reach_A,
            "next": nxt[:3], "freq": freq, "daily": daily, "loads": loads, "drivers": drivers}
     print_report(ctx)
-    print("\nSearch: %d candidates, sizes %d-%d, %s nodes, %.1f s%s"
+    print("\nSearch: %d candidates, sizes %d-%d, %s nodes, %.1f s%s%s"
           % (len(pool), rows[0]["n"], rows[-1]["n"], "{:,}".format(sum(r["nodes"] for r in rows)), elapsed,
-             "" if all(r["exact"] for r in rows) else "  (time limit hit: some sizes are heuristic)"))
+             "" if all(r["exact"] for r in rows) else "  (time limit hit: some sizes are heuristic)",
+             "  (stopped at --max-n: a longer routine may score higher)" if len(rows[-1]["set"]) == a.max_n else ""))
     if a.json:
         write_json(a.json, ctx)
         print("JSON written to %s" % a.json)

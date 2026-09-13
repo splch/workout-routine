@@ -62,7 +62,7 @@ Works: Pectoralis major, Triceps brachii, Deltoid (anterior). Also: Serratus ant
 
 Works: Pectoralis major, Triceps brachii, Deltoid (anterior). Also: Serratus anterior, Abdominals. Equipment: none.
 
-- **Wide push-up** *(beginner)* — Hands well outside the shoulders: more chest, less triceps. Also called: Wide-grip push-up.
+- **Wide push-up** *(beginner)* — Hands well outside the shoulders; works the chest and triceps a little less than the standard push-up. Also called: Wide-grip push-up.
 - **Close-grip push-up** *(beginner)* — Hands under the shoulders, elbows brushing the ribs: more triceps. Also called: Close push-up, Narrow push-up, Triceps push-up.
 - **Diamond push-up** *(intermediate)* — Thumbs and index fingers touch to form a diamond under the chest. Also called: Triangle push-up. Works: Triceps brachii, Pectoralis major, Deltoid (anterior).
 - **Staggered push-up** *(beginner)* — One hand forward and one back; switch sides each set. Also called: Offset push-up.
@@ -145,7 +145,7 @@ Vertical pushing: pressing the body up overhead, from pike push-ups to one-arm h
 
 Works: Deltoid (anterior), Deltoid (lateral), Triceps brachii, Trapezius (upper). Also: Serratus anterior, Pectoralis major (clavicular head), Abdominals. Equipment: none. Easiest to hardest.
 
-- **Dolphin push-up** *(beginner)* — From a forearm plank, push the hips up into a pike on the forearms, then return. Also called: Dolphin press.
+- **Dolphin push-up** *(beginner)* — From a forearm plank, push the hips up into a pike on the forearms, then return. Also called: Dolphin press. Works: Deltoid (anterior), Deltoid (lateral), Trapezius (upper). Also: Serratus anterior, Triceps brachii, Pectoralis major (clavicular head), Abdominals.
 - **Pike push-up** *(intermediate)* — Hips high in an inverted V; lower the head to the floor just in front of the hands.
 - **Elevated pike push-up** *(intermediate · box, bench or chair)* — Feet on a box so the torso is closer to vertical. Also called: Feet-elevated pike push-up, Decline pike push-up.
 - **Deficit pike push-up** *(intermediate · parallettes)* — Hands on parallettes or blocks so the head can sink below the hands.
@@ -153,7 +153,7 @@ Works: Deltoid (anterior), Deltoid (lateral), Triceps brachii, Trapezius (upper)
 - **Handstand push-up negative** *(advanced · wall)* — Lower slowly from a wall handstand to the head, then come down. Also called: HSPU negative, Eccentric handstand push-up.
 - **Half handstand push-up** *(advanced · wall)* — Wall handstand push-up through the top half of the range. Also called: Partial HSPU.
 - **Kipping handstand push-up** *(advanced · wall)* — Drive the legs up from the bottom to help finish the press (CrossFit style). Also called: Kipping HSPU.
-- **Wall handstand push-up** *(advanced · wall)* — Back to the wall, lower the head to the floor and press back to straight arms. Also called: HSPU, Handstand press-up, Wall headstand push-up, HeSPU.
+- **Wall handstand push-up** *(advanced · wall)* — Back to the wall, lower the head to the floor and press back to straight arms. Also called: HSPU, Handstand push-up, Handstand press-up, Wall headstand push-up, HeSPU.
 - **Chest-to-wall handstand push-up** *(advanced · wall)* — Facing the wall, which forces a straighter body line. Also called: Wall-facing HSPU.
 - **Close-grip handstand push-up** *(advanced · wall)* — Hands close together; more triceps, harder balance. Also called: Close handstand push-up.
 - **Deficit handstand push-up** *(advanced · wall + parallettes)* — Hands on parallettes or plates so the head sinks below the hands. Also called: Deficit HSPU, Full-range HSPU.
@@ -274,7 +274,7 @@ Horizontal pulling: pulling the chest toward a bar, rings or a fixed handhold.
 
 ### Row progression
 
-Works: Latissimus dorsi, Rhomboids, Trapezius (middle), Deltoid (posterior), Biceps brachii. Also: Brachialis, Teres major, Forearm flexors, Abdominals. Equipment: low bar or sturdy table / rings / suspension trainer. Easiest to hardest.
+Works: Latissimus dorsi, Rhomboids, Trapezius (middle), Deltoid (posterior), Biceps brachii, Brachialis. Also: Teres major, Forearm flexors, Abdominals. Equipment: low bar or sturdy table / rings / suspension trainer. Easiest to hardest.
 
 - **Door-frame row** *(beginner · door frame or sturdy post)* — Hold both sides of a door frame, lean back with straight arms and pull yourself in. Also called: Vertical pull, Doorway row, Vertical row.
 - **Table row** *(beginner · low bar or sturdy table)* — Lie under a sturdy table, grip the edge and pull the chest up to it. Also called: Tabletop row.
@@ -282,7 +282,7 @@ Works: Latissimus dorsi, Rhomboids, Trapezius (middle), Deltoid (posterior), Bic
 - **Bent-knee inverted row** *(beginner)* — Inverted row with the knees bent and the feet flat on the floor.
 - **Inverted row** *(beginner)* — Body straight under a hip-height bar or rings, heels down; pull the chest to the hands. Also called: Australian pull-up, Bodyweight row, Body row, Ring row, Suspension row, TRX row.
 - **Underhand inverted row** *(beginner)* — Palms facing you; more biceps. Also called: Reverse-grip row, Supinated row.
-- **Wide-grip inverted row** *(intermediate)* — Hands wide; more upper back and rear delts. Also called: Wide row. Works: Rhomboids, Trapezius (middle), Deltoid (posterior), Latissimus dorsi.
+- **Wide-grip inverted row** *(intermediate)* — Hands wide; more upper back and rear delts. Also called: Wide row. Works: Rhomboids, Trapezius (middle), Deltoid (posterior), Latissimus dorsi. Also: Brachialis, Teres major, Forearm flexors, Abdominals.
 - **Feet-elevated inverted row** *(intermediate · low bar or sturdy table + box, bench or chair / rings + box, bench or chair)* — Feet on a box so the body is horizontal or tilted head-down. Also called: Elevated row.
 - **Archer row** *(advanced)* — Row toward one hand while the other arm stays straight. Also called: Archer inverted row.
 - **One-arm inverted row** *(advanced)* — Row on one hand, keeping the hips and shoulders square. Also called: One-arm ring row, Single-arm row.
@@ -593,10 +593,10 @@ Works: Rectus abdominis. Also: Obliques, Hip flexors (iliopsoas, rectus femoris)
 
 Works: Rectus abdominis, Hip flexors (iliopsoas, rectus femoris). Also: Obliques, Latissimus dorsi, Forearm flexors. Equipment: none. Easiest to hardest.
 
-- **Lying knee raise** *(beginner)* — On the back, bring the bent knees toward the chest and lower. Also called: Flat knee raise.
-- **Flutter kick** *(beginner)* — Legs straight and hovering; kick them up and down in small, quick strokes. Also called: Flutter kicks.
-- **Scissor kick** *(beginner)* — Legs hovering; cross them over and under each other. Also called: Scissor kicks, Scissors.
-- **Lying leg raise** *(beginner)* — Raise the straight legs to vertical and lower without arching the back. Also called: Flat leg raise.
+- **Lying knee raise** *(beginner)* — On the back, bring the bent knees toward the chest and lower. Also called: Flat knee raise. Also: Obliques.
+- **Flutter kick** *(beginner)* — Legs straight and hovering; kick them up and down in small, quick strokes. Also called: Flutter kicks. Also: Obliques.
+- **Scissor kick** *(beginner)* — Legs hovering; cross them over and under each other. Also called: Scissor kicks, Scissors. Also: Obliques.
+- **Lying leg raise** *(beginner)* — Raise the straight legs to vertical and lower without arching the back. Also called: Flat leg raise. Also: Obliques.
 - **Parallel-bar knee raise** *(beginner · parallel (dip) bars)* — Supported on dip bars, raise the knees toward the chest. Also called: Captain's chair knee raise, Vertical knee raise.
 - **Hanging knee raise** *(beginner · pull-up bar)* — Hang from the bar and raise the knees to the chest.
 - **Parallel-bar leg raise** *(intermediate · parallel (dip) bars)* — Supported on dip bars, raise the straight legs to horizontal. Also called: Captain's chair leg raise.
@@ -765,20 +765,20 @@ Works: Hamstrings. Also: Gluteus maximus, Calves (gastrocnemius, soleus), Abdomi
 
 ### Hinges & back extensions
 
-Works: Erector spinae, Gluteus maximus, Hamstrings. Also: Multifidus, Abdominals. Equipment: none.
+Works: Erector spinae, Multifidus, Gluteus maximus, Hamstrings. Also: Abdominals. Equipment: none.
 
 - **Bird dog** *(beginner)* — On hands and knees, reach the opposite arm and leg out long, then switch. Also called: Quadraplex, Quadruped opposite arm-and-leg raise. Works: Erector spinae, Multifidus, Gluteus maximus. Also: Abdominals, Deltoid (posterior).
 - **Bodyweight good morning** *(beginner)* — Hands behind the head; hinge forward at the hips with a flat back, then stand. Also called: Hip hinge, Bodyweight Romanian deadlift.
-- **Single-leg Romanian deadlift** *(beginner)* — Hinge forward on one leg as the other reaches back, then stand. Also called: Single-leg RDL, Single-leg deadlift, Kickstand RDL (back toe down), Warrior III (held). Also: Gluteus medius & minimus, Multifidus, Abdominals.
+- **Single-leg Romanian deadlift** *(beginner)* — Hinge forward on one leg as the other reaches back, then stand. Also called: Single-leg RDL, Single-leg deadlift, Kickstand RDL (back toe down), Warrior III (held). Also: Gluteus medius & minimus, Abdominals.
 - **Superman** *(beginner)* — Face down, lift the arms, chest and legs off the floor, then lower. Also called: Prone back extension, Superman lift, Locust pose, Salabhasana, Arch raise.
 - **Arch body hold** *(beginner · isometric)* — Face down, hold the arms and legs lifted in a long banana shape. Also called: Arch hold, Superman hold, Reverse hollow.
 - **Swimmer** *(beginner)* — Face down, flutter the opposite arm and leg up and down. Also called: Swimmers, Prone flutter.
-- **Prone leg raise** *(beginner)* — Face down, lift the straight legs off the floor. Also called: Reverse leg raise. Works: Gluteus maximus, Hamstrings, Erector spinae.
-- **Donkey kick** *(beginner)* — On hands and knees, drive one bent leg up and back. Also called: Quadruped hip extension, Glute kickback. Works: Gluteus maximus, Hamstrings.
+- **Prone leg raise** *(beginner)* — Face down, lift the straight legs off the floor. Also called: Reverse leg raise. Works: Gluteus maximus, Hamstrings, Erector spinae, Multifidus.
+- **Donkey kick** *(beginner)* — On hands and knees, drive one bent leg up and back. Also called: Quadruped hip extension, Glute kickback. Works: Gluteus maximus, Hamstrings. Also: Multifidus, Abdominals.
 - **Back extension** *(beginner · GHD or back-extension bench)* — On a 45-degree or horizontal bench, lower the torso and raise it back in line with the legs. Also called: Hyperextension, 45-degree back extension.
 - **Arch rock** *(intermediate)* — Rock back and forth while holding the arch shape. Also called: Superman rock.
 - **Hip airplane** *(intermediate)* — Hinged forward on one leg, rotate the pelvis open to the side and back closed. Works: Gluteus medius & minimus, Gluteus maximus, Deep hip rotators. Also: Hamstrings, Abdominals.
-- **Reverse hyperextension** *(intermediate · box, bench or chair / GHD or back-extension bench)* — Torso on a bench or table with the hips at the edge; raise the straight legs to horizontal. Also called: Reverse hyper. Works: Gluteus maximus, Hamstrings, Erector spinae.
+- **Reverse hyperextension** *(intermediate · box, bench or chair / GHD or back-extension bench)* — Torso on a bench or table with the hips at the edge; raise the straight legs to horizontal. Also called: Reverse hyper. Works: Gluteus maximus, Hamstrings, Erector spinae. Also: Multifidus, Abdominals.
 
 ### Hip abductors, adductors & flexors
 
@@ -836,7 +836,7 @@ Works: Neck flexors (SCM, longus colli & capitis), Neck extensors (splenius, sem
 - **Lying neck curl** *(beginner)* — On the back (head off a bench edge, if you use one), tuck the chin and lift the head. Also called: Supine neck flexion. Works: Neck flexors (SCM, longus colli & capitis).
 - **Prone neck extension** *(beginner)* — Face down (head off a bench edge, if you use one), lift the head back. Also called: Lying neck extension. Works: Neck extensors (splenius, semispinalis), Trapezius (upper).
 - **Side-lying neck raise** *(beginner)* — Lying on one side, lift the head toward the ceiling. Also called: Lateral neck raise. Works: Sternocleidomastoid, Scalenes. Also: Levator scapulae, Trapezius (upper).
-- **Wall neck bridge** *(beginner · isometric · wall)* — Lean the head against a padded wall (front, back or side) and hold part of your weight. Also called: Wall neck isometric.
+- **Wall neck bridge** *(beginner · isometric · wall)* — Lean the head against a padded wall, front, back and each side in turn, holding part of your weight. Also called: Wall neck isometric.
 
 ### Neck bridges
 
@@ -1125,13 +1125,13 @@ Joseph Pilates' 34 original mat exercises from Return to Life Through Contrology
 
 Works: Abdominals. Also: Hip flexors (iliopsoas, rectus femoris), Erector spinae. Equipment: none. Listed in Pilates' own sequence, not by difficulty.
 
-- **The Hundred** *(beginner)* — Curl up with the legs raised and pump the straight arms up and down for 100 counts while breathing. Also called: Hundred.
-- **Roll-up** *(beginner)* — Lying with the arms overhead, roll up through the spine to reach for the toes, then roll back down. Also called: The Roll Up.
+- **The Hundred** *(beginner)* — Curl up with the legs raised and pump the straight arms up and down for 100 counts while breathing. Also: Hip flexors (iliopsoas, rectus femoris).
+- **Roll-up** *(beginner)* — Lying with the arms overhead, roll up through the spine to reach for the toes, then roll back down. Also called: The Roll Up. Also: Hip flexors (iliopsoas, rectus femoris).
 - **Roll-over** *(intermediate)* — Swing the legs overhead until the toes touch the floor behind, then roll back down with control. Also called: The Roll-Over with Legs Spread.
-- **One-leg circle** *(beginner)* — On the back with one leg to the ceiling, circle it without rocking the pelvis. Also called: Single-leg circle.
-- **Rolling like a ball** *(beginner)* — Balance in a tight tuck, roll back to the shoulder blades and up again. Also called: Rolling back.
-- **Single-leg stretch** *(beginner)* — Curled up, pull one knee in while the other leg extends, switching in rhythm. Also called: One leg stretch.
-- **Double-leg stretch** *(beginner)* — Curled up, reach the arms and legs away together, then circle the arms and hug the knees.
+- **One-leg circle** *(beginner)* — On the back with one leg to the ceiling, circle it without rocking the pelvis. Also called: Single-leg circle. Also: Hip flexors (iliopsoas, rectus femoris).
+- **Rolling like a ball** *(beginner)* — Balance in a tight tuck, roll back to the shoulder blades and up again. Also called: Rolling back. Also: Hip flexors (iliopsoas, rectus femoris).
+- **Single-leg stretch** *(beginner)* — Curled up, pull one knee in while the other leg extends, switching in rhythm. Also called: One leg stretch. Also: Hip flexors (iliopsoas, rectus femoris).
+- **Double-leg stretch** *(beginner)* — Curled up, reach the arms and legs away together, then circle the arms and hug the knees. Also: Hip flexors (iliopsoas, rectus femoris).
 - **Spine stretch forward** *(beginner · mobility)* — Sitting with the legs apart, round forward one vertebra at a time, then restack. Also called: The Spine Stretch.
 - **Open-leg rocker** *(intermediate)* — Balance holding the ankles with the legs in a V, then roll back and up. Also called: Rocker with open legs.
 - **Corkscrew** *(intermediate)* — With the legs together overhead, circle them side to side with control. Also called: Cork-screw. Also: Obliques, Hip flexors (iliopsoas, rectus femoris).
@@ -1154,7 +1154,7 @@ Works: Abdominals. Also: Hip flexors (iliopsoas, rectus femoris), Erector spinae
 - **Kneeling side kick** *(advanced)* — Kneeling on one knee with a hand down, kick the top leg forward and back. Also called: Side kick kneeling. Works: Gluteus medius & minimus, Abdominals.
 - **Pilates side bend** *(advanced)* — From sitting on one hip, lift into a side plank arching up and over. Also called: The Side Bend. Works: Obliques, Quadratus lumborum. Also: Gluteus medius & minimus, Deltoid (lateral).
 - **Boomerang** *(advanced)* — Roll over with the legs crossed, switch the cross, roll up to a teaser and sweep the arms behind.
-- **Seal** *(beginner)* — Balance holding the ankles from inside the knees, clap the feet together, roll back and up.
+- **Seal** *(beginner)* — Balance holding the ankles from inside the knees, clap the feet together, roll back and up. Also: Hip flexors (iliopsoas, rectus femoris).
 - **Pilates crab** *(advanced)* — Holding the crossed feet, roll back, then forward onto the knees and top of the head. Also called: The Crab.
 - **Rocking** *(advanced)* — Face down holding the ankles in a bow, rock forward and back. Works: Erector spinae, Gluteus maximus, Quadriceps. Also: Pectoralis major, Deltoid (anterior).
 - **Control balance** *(advanced)* — From a roll-over, lift one leg to the ceiling and switch legs, balanced on the shoulders.
@@ -1307,7 +1307,7 @@ Established bodyweight training programs.
 - **7-Minute Workout** *(Klika & Jordan, 2013)* — 12 exercises for 30 s each with 10 s transitions: jumping jacks, wall sit, push-up, crunch, step-up onto a chair, squat, triceps dip on a chair, plank, high knees, lunge, push-up with rotation, side plank. Repeat 2–3 times if you like.
 - **You Are Your Own Gym** *(Mark Lauren with Joshua Clark)* — Four 10-week programs (Basic, 1st Class, Master Class, Chief Class), about 30 minutes four times a week alternating push/pull and legs/core days, using ladders, supersets, interval sets, timed sets, Tabatas and Stappers.
 - **Original Tabata protocol** *(Tabata et al., 1996)* — 7–8 bouts of 20 s at about 170% of VO2max with 10 s rest, to exhaustion, on a braked exercise bike; 5 days a week for 6 weeks. Raised VO2max by about 7 ml/kg/min and anaerobic capacity by 28%. Bodyweight "Tabatas" borrow the timing, not the intensity.
-- **Combat Conditioning ("Royal Court")** *(Matt Furey, 2000)* — Hindu squats, Hindu push-ups and the wrestler's bridge. Start squats at 25–50 reps with 500 in a row as a long-term goal; hold the bridge for up to 3 minutes.
+- **Combat Conditioning ("Royal Court")** *(Matt Furey, 2000)* — Hindu squats, Hindu push-ups and the wrestler's bridge. Start squats at 25–50 reps with 500 in a row as a long-term goal; hold the wrestler's bridge for up to 3 minutes.
 - **Pehlwani dands and baithaks** *(Indian wrestling tradition)* — Wrestlers train Hindu push-ups (dands) and Hindu squats (baithaks) in the hundreds or thousands; accounts of the Great Gama claim thousands of each daily. Many named dand and baithak variants exist.
 - **Walter Camp's Daily Dozen** *(Walter Camp, 1919)* — 12 short mobility drills in four groups (Hands, Hips, Head; Grind, Grate, Grasp; Crawl, Curl, Crouch; Wave, Weave, Wing), about 15 minutes a day.
 - **US Army PRT drills** *(US Army, TC 3-22.20 and ATP 7-22.02)* — Preparation Drill (bend and reach, rear lunge, high jumper, rower, squat bender, windmill, forward lunge, prone row, bent-leg body twist, push-up); Conditioning Drill 1 (power jump, V-up, mountain climber, leg tuck and twist, single-leg push-up); Conditioning Drill 2 (turn and lunge, supine bicycle, half jacks, swimmer, 8-count push-up); Conditioning Drill 3 (jumping and agility); 4 for the Core (bent-leg raise, side bridge, back bridge, quadraplex); Hip and Shoulder Stability Drills; Climbing Drills on a bar. 5–10 reps each.

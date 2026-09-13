@@ -772,7 +772,7 @@
       "aka": [
         "Wide-grip push-up"
       ],
-      "note": "Hands well outside the shoulders: more chest, less triceps."
+      "note": "Hands well outside the shoulders; works the chest and triceps a little less than the standard push-up."
     },
     {
       "id": "close-grip-push-up",
@@ -2101,11 +2101,11 @@
       ],
       "primary_muscles": [
         "deltoid",
-        "triceps-brachii",
         "trapezius"
       ],
       "secondary_muscles": [
         "serratus-anterior",
+        "triceps-brachii",
         "pectoralis-major",
         "rectus-abdominis",
         "external-oblique",
@@ -2344,6 +2344,7 @@
       "step": 9,
       "aka": [
         "HSPU",
+        "Handstand push-up",
         "Handstand press-up",
         "Wall headstand push-up",
         "HeSPU"
@@ -4580,10 +4581,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4619,10 +4620,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4658,10 +4659,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4698,10 +4699,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4734,10 +4735,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4778,10 +4779,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4855,10 +4856,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4894,10 +4895,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -4933,10 +4934,10 @@
         "rhomboid-minor",
         "trapezius",
         "deltoid",
-        "biceps-brachii"
+        "biceps-brachii",
+        "brachialis"
       ],
       "secondary_muscles": [
-        "brachialis",
         "teres-major",
         "flexor-digitorum-superficialis",
         "flexor-digitorum-profundus",
@@ -10664,13 +10665,7 @@
       ],
       "secondary_muscles": [
         "external-oblique",
-        "internal-oblique",
-        "latissimus-dorsi",
-        "flexor-digitorum-superficialis",
-        "flexor-digitorum-profundus",
-        "flexor-carpi-radialis",
-        "flexor-carpi-ulnaris",
-        "flexor-pollicis-longus"
+        "internal-oblique"
       ],
       "step": 1,
       "aka": [
@@ -10696,13 +10691,7 @@
       ],
       "secondary_muscles": [
         "external-oblique",
-        "internal-oblique",
-        "latissimus-dorsi",
-        "flexor-digitorum-superficialis",
-        "flexor-digitorum-profundus",
-        "flexor-carpi-radialis",
-        "flexor-carpi-ulnaris",
-        "flexor-pollicis-longus"
+        "internal-oblique"
       ],
       "step": 2,
       "aka": [
@@ -10728,13 +10717,7 @@
       ],
       "secondary_muscles": [
         "external-oblique",
-        "internal-oblique",
-        "latissimus-dorsi",
-        "flexor-digitorum-superficialis",
-        "flexor-digitorum-profundus",
-        "flexor-carpi-radialis",
-        "flexor-carpi-ulnaris",
-        "flexor-pollicis-longus"
+        "internal-oblique"
       ],
       "step": 3,
       "aka": [
@@ -10761,13 +10744,7 @@
       ],
       "secondary_muscles": [
         "external-oblique",
-        "internal-oblique",
-        "latissimus-dorsi",
-        "flexor-digitorum-superficialis",
-        "flexor-digitorum-profundus",
-        "flexor-carpi-radialis",
-        "flexor-carpi-ulnaris",
-        "flexor-pollicis-longus"
+        "internal-oblique"
       ],
       "step": 4,
       "aka": [
@@ -14346,13 +14323,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14379,6 +14356,7 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
@@ -14387,7 +14365,6 @@
       "secondary_muscles": [
         "gluteus-medius",
         "gluteus-minimus",
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14416,13 +14393,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14452,13 +14429,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14486,13 +14463,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14522,10 +14499,10 @@
         "iliocostalis-lumborum",
         "iliocostalis-thoracis",
         "longissimus-thoracis",
-        "spinalis-thoracis"
+        "spinalis-thoracis",
+        "multifidus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14580,13 +14557,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -14613,13 +14590,13 @@
         "iliocostalis-thoracis",
         "longissimus-thoracis",
         "spinalis-thoracis",
+        "multifidus",
         "gluteus-maximus",
         "biceps-femoris",
         "semitendinosus",
         "semimembranosus"
       ],
       "secondary_muscles": [
-        "multifidus",
         "rectus-abdominis",
         "external-oblique",
         "internal-oblique",
@@ -15562,7 +15539,7 @@
       "aka": [
         "Wall neck isometric"
       ],
-      "note": "Lean the head against a padded wall (front, back or side) and hold part of your weight."
+      "note": "Lean the head against a padded wall, front, back and each side in turn, holding part of your weight."
     },
     {
       "id": "front-neck-bridge",
@@ -21104,14 +21081,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
-      ],
-      "aka": [
-        "Hundred"
+        "rectus-femoris"
       ],
       "note": "Curl up with the legs raised and pump the straight arms up and down for 100 counts while breathing."
     },
@@ -21134,11 +21104,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "aka": [
         "The Roll Up"
@@ -21194,11 +21160,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "aka": [
         "Single-leg circle"
@@ -21224,11 +21186,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "aka": [
         "Rolling back"
@@ -21254,11 +21212,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "aka": [
         "One leg stretch"
@@ -21284,11 +21238,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "note": "Curled up, reach the arms and legs away together, then circle the arms and hug the knees."
     },
@@ -21916,11 +21866,7 @@
       "secondary_muscles": [
         "psoas-major",
         "iliacus",
-        "rectus-femoris",
-        "iliocostalis-lumborum",
-        "iliocostalis-thoracis",
-        "longissimus-thoracis",
-        "spinalis-thoracis"
+        "rectus-femoris"
       ],
       "note": "Balance holding the ankles from inside the knees, clap the feet together, roll back and up."
     },
@@ -22885,7 +22831,7 @@
     {
       "name": "Combat Conditioning (\"Royal Court\")",
       "origin": "Matt Furey, 2000",
-      "summary": "Hindu squats, Hindu push-ups and the wrestler's bridge. Start squats at 25–50 reps with 500 in a row as a long-term goal; hold the bridge for up to 3 minutes.",
+      "summary": "Hindu squats, Hindu push-ups and the wrestler's bridge. Start squats at 25–50 reps with 500 in a row as a long-term goal; hold the wrestler's bridge for up to 3 minutes.",
       "source_url": ""
     },
     {
