@@ -15,6 +15,12 @@
 
 It prints the routine in circuit order with progression steps, swaps, what one more move would add, and a daily protocol quoted from the database. The defaults (beginner level, household equipment) give six moves in about four minutes per round: push-up, forearm plank, squat, inverted row, sit-up, superman. Every step already does most of the calves' training, so the calf raise that a blank slate (`--daily-life 0`) would add does not pay its way.
 
+Every workout: 30 s on each move, 10 s to get to the next, two to six rounds, stopping a rep or two short of failure.
+
+- No equipment (`--equipment none`): push-up, forearm plank, squat, prone row, flutter kick, superman.
+- Household items (default, with or without a pull-up bar): push-up, forearm plank, squat, inverted row, sit-up, superman.
+- Pull-up bar (`--equipment none,bar`): push-up, assisted pull-up, prone row, sit-up, superman, forearm plank, squat.
+
 ## Options
 
     --equipment none            floor only; default none,wall,box,door,low-bar,towel; or all
